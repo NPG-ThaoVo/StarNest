@@ -71,18 +71,20 @@
 
 .footer-form {
   background: white;
+  border-radius: 8px;
 }
 
 .form-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .form-container input {
   padding: 15px 0 15px 16px;
   border: none;
   border-radius: 8px 0 0 8px;
-  width: 100%;
+  width: calc(100% - 100px);
 }
 
 .form-container input:focus-visible {
@@ -125,6 +127,10 @@
     padding-bottom: 22px;
   }
 
+  .footer-form {
+    border-radius: 4px;
+  }
+
   .footer-block:last-child {
     width: 100%;
     flex-basis: 100%;
@@ -159,6 +165,8 @@
   .form-container input {
     padding: 13px 0 13px 16px;
     border-radius: 4px 0 0 4px;
+
+    width: calc(100% - 70px);
   }
 
   .form-container button {
