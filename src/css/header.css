@@ -1,0 +1,86 @@
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* font-family: "Be Vietnam", sans-serif; */
+
+  padding: 21px 120px 0;
+}
+
+.header-logo-container img {
+}
+
+.header-logo-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.header-routes-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+
+.header-routes-container * {
+  list-style-type: none;
+}
+
+.header-routes-item {
+  padding-left: 26px;
+  padding-right: 26px;
+}
+
+.route-item {
+  color: #1b3765;
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 35px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.route-item__selected {
+  color: #71ba44;
+  position: relative;
+}
+
+.route-item__selected::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background-color: #71ba44;
+  bottom: -5px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 500px;
+  left: calc(50% - 20px);
+}
+
+.header-menu-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 32px 24px 0;
+  }
+
+  .header-routes {
+    display: none;
+  }
+
+  .header-menu-button {
+    display: block;
+  }
+
+  .header-logo-container {
+    max-width: 37%;
+  }
+
+  .header-logo-image {
+    min-width: 124px;
+  }
+}
