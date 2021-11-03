@@ -5,7 +5,32 @@
   align-items: center;
   /* font-family: "Be Vietnam", sans-serif; */
 
-  padding: 21px 120px 0;
+  padding: 71px 120px 0;
+
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  padding-bottom: 8px;
+  left: 0;
+  right: 0;
+
+  transition: top 0.5s ease-in-out, display 0.5s ease-in-out;
+
+  z-index: 999;
+}
+
+.header-placeholder {
+  position: relative;
+  height: 130px;
+  width: 100%;
+}
+
+.header-visible {
+  top: 0px;
+}
+
+.header-hide {
+  top: -200px;
 }
 
 .header-logo-container img {
@@ -73,10 +98,42 @@
   display: none;
 }
 
+.button-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 4%;
+  z-index: 999;
+  transition: all 0.5s ease-in-out;
+}
+
+.button-to-top__hide {
+  bottom: -100px;
+}
+
+.button-to-top button {
+  border-radius: 500px;
+  background: #1072ba;
+  border: none;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+}
+
+.button-to-top button img {
+  width: 20px;
+  height: 18px;
+  transform: rotateZ(-90deg) translateX(0px);
+  transition: all 0.3s ease-in-out;
+}
+
+.button-to-top button:hover img {
+  transform: rotateZ(-90deg) translateX(6px);
+}
+
 @media (max-width: 768px) {
   .header-container {
     padding: 32px 24px 0;
-    position: relative;
+    /* position: relative; */
   }
 
   .header-routes {
@@ -112,6 +169,11 @@
     transition: max-height 0.3s linear, max-width 0.3s linear;
   }
 
+  .header-hide .header-routes-mobile {
+    max-width: 0px !important;
+    max-height: 0px !important  ;
+  }
+
   .header-routes-container {
     flex-direction: column;
   }
@@ -136,5 +198,13 @@
   .header-routes-item {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .header-placeholder {
+    height: 70px;
+  }
+
+  .button-to-top {
+    right: 24px;
   }
 }
