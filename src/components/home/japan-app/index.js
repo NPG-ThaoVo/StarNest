@@ -10,8 +10,7 @@ export default function JapanApp(){
                 Explore our Applications
             </div>
             <div className={styles['content']}>
-                With more than 30,000 JLPT questions and 200 JLPT exams from previous years will be the exam preparation book to store your progress.
-                Let experience the HERMANN EBBINGHAUS FORGETTING CURVE memorization method to help you feel more confident in the upcoming exam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, suspendisse consequat duis sapien mattis. Amet nisi, odio commodo mauris lacus.
             </div>
             <div className={styles['wrap']}>
                 <div className={styles['left']}>
@@ -19,7 +18,7 @@ export default function JapanApp(){
                         <img src='/imgs/bg-jp.svg' className={styles['bg']} alt=''/>
                         <div className={styles['wrap-phone']}>
                             <img src='/imgs/white.svg' className={styles['white']} alt=''/>
-                            <img src='/imgs/japanese.svg' className={styles['phone']} alt=''/>
+                            <img src='/imgs/japanese.png' className={styles['phone']} alt=''/>
                         </div>
                     </div>
                 </div>

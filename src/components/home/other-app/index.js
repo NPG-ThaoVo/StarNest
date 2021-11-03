@@ -10,7 +10,7 @@ export default function OtherApps(){
             <div className={styles['wrap']}>
                 <div className={styles['right']}>
                     <div className={styles['title-right']}>
-                        Prep JLPT
+                        Prep TOPIK
                         <img src='/imgs/line.svg' className={styles['line']} alt=''/>
                     </div>
                     <div className={styles['content-right']}>
@@ -32,7 +32,7 @@ export default function OtherApps(){
                     <div className={styles['wrap-left']}>
                         <img src='/imgs/bg-korean.svg' className={styles['bg']} alt=''/>
                         <div className={styles['wrap-phone']}>
-                            <img src='/imgs/korean.svg' className={styles['phone']} alt=''/>
+                            <img src='/imgs/korean.png' className={styles['phone']} alt=''/>
                         </div>
                     </div>
                 </div>
@@ -43,13 +43,13 @@ export default function OtherApps(){
                     <div className={styles['wrap-left']}>
                         <img src='/imgs/bg-german.svg' className={styles['bg']} alt=''/>
                         <div className={styles['wrap-phone']}>
-                            <img src='/imgs/german.svg' className={styles['phone']} alt=''/>
+                            <img src='/imgs/german.png' className={styles['phone']} alt=''/>
                         </div>
                     </div>
                 </div>
                 <div className={styles['right']}>
                     <div className={styles['title-right']}>
-                        Prep JLPT
+                        Prep GOETHE
                         <img src='/imgs/line.svg' className={styles['line']} alt=''/>
                     </div>
                     <div className={styles['content-right']}>
@@ -73,7 +73,7 @@ export default function OtherApps(){
             <div className={styles['wrap']}>
                 <div className={styles['right']}>
                     <div className={styles['title-right']}>
-                        Prep JLPT
+                        Prep TOEIC
                         <img src='/imgs/line.svg' className={styles['line']} alt=''/>
                     </div>
                     <div className={styles['content-right']}>
@@ -94,7 +94,8 @@ export default function OtherApps(){
                     <div className={styles['wrap-left']}>
                         <img src='/imgs/bg-english.svg' className={styles['bg']} alt=''/>
                         <div className={styles['wrap-phone']}>
-                            <img src='/imgs/english.svg' className={styles['phone']} alt=''/>
+                            <img src='/imgs/pink.svg' className={styles['white']} alt=''/>
+                            <img src='/imgs/english.png' className={styles['phone']} alt=''/>
                         </div>
                     </div>
                 </div>
