@@ -7,7 +7,7 @@
 
   padding: 71px 120px 0;
 
-  position: fixed;
+  position: sticky;
   width: 100%;
   background-color: white;
   padding-bottom: 8px;
@@ -26,19 +26,21 @@
 }
 
 .header-visible {
-  top: 0px;
+  top: -60px;
 }
 
 .header-hide {
   top: -200px;
 }
 
-.header-logo-container img {
+.header-logo-container {
+  padding-right: 8px;
 }
 
 .header-logo-image {
   max-width: 100%;
   max-height: 100%;
+  min-width: 260px;
 }
 
 .header-routes-container {
@@ -130,6 +132,26 @@
   transform: rotateZ(-90deg) translateX(6px);
 }
 
+.header-mobile-cover {
+  display: none;
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .header-routes {
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .header-routes-container {
+    justify-content: space-between;
+  }
+
+  .header-routes-item {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+
 @media (max-width: 768px) {
   .header-container {
     padding: 32px 24px 0;
@@ -158,24 +180,23 @@
 
   .header-routes-mobile {
     position: absolute;
-    top: 72px;
-    right: 24px;
+    top: 98%;
+    right: 0;
     text-align: right;
     overflow: hidden;
-
-    max-width: 0px;
+    width: 100%;
     max-height: 0px;
-
+    background: white;
     transition: max-height 0.3s linear, max-width 0.3s linear;
   }
 
   .header-hide .header-routes-mobile {
-    max-width: 0px !important;
     max-height: 0px !important  ;
   }
 
   .header-routes-container {
     flex-direction: column;
+    padding-right: 24px;
   }
 
   .route-item {
@@ -191,13 +212,13 @@
   }
 
   .header-menu-checkbox:checked + .header-routes-mobile {
-    max-width: 200px;
     max-height: 250px;
   }
 
   .header-routes-item {
     padding-left: 0;
     padding-right: 0;
+    line-height: 48px;
   }
 
   .header-placeholder {
@@ -206,5 +227,10 @@
 
   .button-to-top {
     right: 24px;
+    bottom: 130px;
+  }
+
+  .header-visible {
+    top: -24px;
   }
 }

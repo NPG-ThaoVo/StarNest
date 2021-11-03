@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import "../../css/footer.css";
-import emailjs from "emailjs-com";
 
 const sendImg = "/imgs/arrow-right.svg";
 const loadingImg = "/imgs/puff.svg";
@@ -102,10 +101,6 @@ const Footer = (props) => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    //
-    //
-    //
   };
 
   const handleChageMail = (e) => {
@@ -114,7 +109,7 @@ const Footer = (props) => {
 
   return (
     <div className="footer-container">
-      <img alt="scratch" className="footer-decor-" src="/imgs/scratch.svg" />
+      {/* <img alt="scratch" className="footer-decor-" src="/imgs/scratch.svg" /> */}
       <div className="footer-quick-link">
         {quickLinks.map((block, index) => (
           <div key={index} className="footer-block">
