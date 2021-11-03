@@ -1,4 +1,11 @@
+import React, { useRef, useState } from "react";
 import "../../css/footer.css";
+import emailjs from "emailjs-com";
+
+const sendImg = "/imgs/arrow-right.svg";
+const loadingImg = "/imgs/puff.svg";
+const errorImg = "/imgs/error.svg";
+const checkedImg = "/imgs/checked.svg";
 
 const quickLinks = [
   {
@@ -88,9 +95,26 @@ const quickLinks = [
 ];
 
 const Footer = (props) => {
+  const form = useRef();
+  const [isSending, setIsSending] = useState(false);
+  const [email, setEmail] = useState("");
+  const [imgSrc, setImgSrc] = useState(sendImg);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    //
+    //
+    //
+  };
+
+  const handleChageMail = (e) => {
+    setEmail(e.target.value);
+  };
+
   return (
     <div className="footer-container">
-      <img className="footer-decor-scratch" src="/imgs/scratch.svg" />
+      <img alt="scratch" className="footer-decor-" src="/imgs/scratch.svg" />
       <div className="footer-quick-link">
         {quickLinks.map((block, index) => (
           <div key={index} className="footer-block">
@@ -117,11 +141,18 @@ const Footer = (props) => {
             </ul>
           </div>
           <div className="footer-form">
-            <form action="" method="post">
+            <form ref={form} onSubmit={sendEmail}>
               <div className="form-container">
-                <input type="text" placeholder="Your email address" />
-                <button type="submit">
-                  <img src="/imgs/arrow-right.svg" alt="submit" />
+                <input
+                  name="email"
+                  type="text"
+                  value={email}
+                  onChange={handleChageMail}
+                  placeholder="Your email address"
+                  disabled={isSending}
+                />
+                <button type="submit" disabled={isSending}>
+                  <img src={imgSrc} alt="submit" />
                 </button>
               </div>
             </form>
