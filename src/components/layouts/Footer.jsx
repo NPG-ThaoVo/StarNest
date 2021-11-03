@@ -90,6 +90,7 @@ const quickLinks = [
 const Footer = (props) => {
   return (
     <div className="footer-container">
+      <img className="footer-decor-scratch" src="/imgs/scratch.svg" />
       <div className="footer-quick-link">
         {quickLinks.map((block, index) => (
           <div key={index} className="footer-block">

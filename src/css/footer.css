@@ -2,6 +2,7 @@
   padding: 88px 120px 80px;
   /* font-family: Be Vietnam; */
   background-color: #1072ba0d;
+  position: relative;
 }
 
 .footer-container h4 {
@@ -71,18 +72,20 @@
 
 .footer-form {
   background: white;
+  border-radius: 8px;
 }
 
 .form-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .form-container input {
   padding: 15px 0 15px 16px;
   border: none;
   border-radius: 8px 0 0 8px;
-  width: 100%;
+  width: calc(100% - 100px);
 }
 
 .form-container input:focus-visible {
@@ -114,6 +117,14 @@
   height: 18px;
 }
 
+.footer-decor-scratch {
+  position: absolute;
+  width: 59px;
+  height: 78px;
+  left: 295px;
+  top: -39px;
+}
+
 @media (max-width: 768px) {
   .footer-container {
     padding: 40px 24px 36px;
@@ -123,6 +134,10 @@
     width: 50%;
     flex-basis: 50%;
     padding-bottom: 22px;
+  }
+
+  .footer-form {
+    border-radius: 4px;
   }
 
   .footer-block:last-child {
@@ -159,6 +174,8 @@
   .form-container input {
     padding: 13px 0 13px 16px;
     border-radius: 4px 0 0 4px;
+
+    width: calc(100% - 70px);
   }
 
   .form-container button {
@@ -177,5 +194,12 @@
   .copyright {
     font-size: 10px;
     line-height: 14px;
+  }
+
+  .footer-decor-scratch {
+    width: 27px;
+    height: 35px;
+    left: 35px;
+    top: -17px;
   }
 }

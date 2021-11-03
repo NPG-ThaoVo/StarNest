@@ -23,7 +23,7 @@ const Header = (props) => {
   const currentPage = routes[0].name;
 
   return (
-    <div className="header-container">
+    <nav className="header-container">
       <div className="header-logo-container">
         <img
           className="header-logo-image"
@@ -31,7 +31,12 @@ const Header = (props) => {
           alt="Start Nest logo"
         />
       </div>
-      <div className="header-routes">
+      <input
+        className="header-menu-checkbox"
+        type="checkbox"
+        id="nav-menu-mobile"
+      />
+      <div className="header-routes  header-routes-mobile">
         <ul className="header-routes-container">
           {routes.map((route, index) => (
             <li key={index} className="header-routes-item">
@@ -47,10 +52,13 @@ const Header = (props) => {
           ))}
         </ul>
       </div>
+
       <div className="header-menu-button">
-        <img src="/imgs/menu.svg" alt="menu button" />
+        <label htmlFor="nav-menu-mobile">
+          <img src="/imgs/menu.svg" alt="menu button" />
+        </label>
       </div>
-    </div>
+    </nav>
   );
 };
 
