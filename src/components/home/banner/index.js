@@ -7,10 +7,12 @@ export default function Banner(){
 
     return <>
         <div className={styles['container']}>
-            <div className={styles['title']}>Dreaming of learning</div>
+            <div className={styles['title']}>
+                Dreaming of learning
+                <div className={styles['subtitle']}>a New Language</div>
+            </div>
             <div className={styles['wrap']}>
                 <div className={styles['left']}>
-                    <div className={styles['subtitle']}>a New Language</div>
                     <div className={styles['content']}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna felis est nisl rutrum. Amet venenatis vel vitae turpis tortor egestas sit rhoncus.
                     </div>
