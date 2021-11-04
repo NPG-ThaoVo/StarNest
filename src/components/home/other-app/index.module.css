@@ -337,11 +337,16 @@
         width: 90px;
     } */
 
-}
-@media (max-width:420px) {
     .arrow {
         width: 95px;
     }
+
+}
+@media (max-width:400px) {
+    .max-wrap {
+        margin-top: -45px;
+    }
+    
 }
 @media (max-width:350px) {
     .max-wrap {
@@ -382,7 +387,7 @@
     }
 
 }
-@media (max-width:350px) {
+@media (max-width:300px) {
     .wrap-button img{
         display: none;
     }
