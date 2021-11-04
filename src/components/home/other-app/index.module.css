@@ -246,6 +246,8 @@
         margin-right: 15px;
         flex-wrap: nowrap;
         min-width: 70px;
+        width: 100%;
+        justify-content: center;
     }
 
     .line {
@@ -304,6 +306,8 @@
         padding: 7px;
         border-radius: 4px;
         flex-wrap: nowrap;
+        width: 100%;
+        justify-content: center;
     }
     
     .button2 div {
@@ -394,6 +398,10 @@
     }
     .arrow {
         width: 20%;
+    }
+    .button1 {
+        min-width: 52px;
+        width: auto;
     }
 }
 @media (min-width:1350px) {
