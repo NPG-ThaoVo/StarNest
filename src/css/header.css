@@ -75,6 +75,10 @@
   font-style: normal;
   font-weight: 400;
 }
+.route-item:hover{
+  color: #71ba44;
+  font-weight: bold;
+}
 
 .route-item__selected {
   color: #71ba44;
@@ -113,12 +117,13 @@
 }
 
 .button-to-top button {
-  border-radius: 500px;
+  border-radius: 50%;
   background: #1072ba;
   border: none;
   width: 56px;
   height: 56px;
   cursor: pointer;
+  box-shadow: 0px 3px 6px #00000029;
 }
 
 .button-to-top button img {
@@ -218,16 +223,16 @@
   .header-routes-item {
     padding-left: 0;
     padding-right: 0;
-    line-height: 48px;
+    line-height: 50px;
   }
 
   .header-placeholder {
-    height: 70px;
+    height: 0;
   }
 
   .button-to-top {
     right: 24px;
-    bottom: 130px;
+    bottom: 17%;
   }
 
   .header-visible {
