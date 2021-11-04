@@ -54,7 +54,11 @@
     line-height: 42px;
     color: #1B3765;
 }
-
+@media (min-width:1920px) {
+    .man{
+        width: 80%;
+    }
+}
 @media (max-width:1024px) {
 
     .max-wrap {
