@@ -30,8 +30,8 @@
 
 .arrow {
     position: absolute;
-    top: -30px;
-    right: -100px;
+    bottom: 52%;
+    left: 100%;
     max-width: 250px;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .white {
-    width: 40%;
+    width: 35%;
     position: absolute;
     right: 18%;
     top: 0px
@@ -170,9 +170,8 @@
     }
 
     .arrow {
-        top: -30px;
-        right: -100px;
         width: 240px;
+        /* left: 70%; */
     }
 
 }
@@ -188,8 +187,6 @@
     }
 
     .arrow {
-        top: -30px;
-        right: -100px;
         width: 260px;
     }
 
@@ -226,9 +223,9 @@
     }
 
     .arrow {
-        top: -30px;
-        right: -20px;
-        width: 180px;
+        width: 150px;
+        bottom: 85%;
+        left: 60%;
     }
 
     .title-right {
@@ -327,14 +324,18 @@
         height: 28px;
     }
 
-    .arrow {
+    /* .arrow {
         top: -20px;
         right: -9px;
         width: 90px;
-    }
+    } */
 
 }
-
+@media (max-width:420px) {
+    .arrow {
+        width: 95px;
+    }
+}
 @media (max-width:350px) {
     .max-wrap {
         padding: 0px 10px 50px;
