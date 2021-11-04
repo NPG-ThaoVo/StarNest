@@ -276,13 +276,15 @@
         font-size: 8px;
         line-height: 26px;
         margin-top: 20px;
+        width: 100%;
     }
     
     .button1 {
         height: 26px;
-        padding: 5px 7px;
+        padding: 7px;
         margin-right: 20px;
         border-radius: 4px;
+        flex-wrap: nowrap;
     }
 
     .button1 div {
@@ -291,8 +293,9 @@
 
     .button2 {
         height: 26px;
-        padding: 5px 7px;
+        padding: 7px;
         border-radius: 4px;
+        flex-wrap: nowrap;
     }
     
     .button2 div {
