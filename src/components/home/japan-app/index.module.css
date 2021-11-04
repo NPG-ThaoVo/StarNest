@@ -283,10 +283,9 @@
     .button1 {
         height: 26px;
         padding: 7px;
-        margin-right: 20px;
+        margin-right: 15px;
         border-radius: 4px;
         flex-wrap: nowrap;
-        min-width: 70px;
     }
 
     .button1 div {
@@ -298,7 +297,6 @@
         padding: 7px;
         border-radius: 4px;
         flex-wrap: nowrap;
-        min-width: 70px;
     }
     
     .button2 div {
