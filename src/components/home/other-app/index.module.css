@@ -59,7 +59,6 @@
 
 .phone {
     width: 100%;
-    position: relative;
 }
 
 .bg {
@@ -292,7 +291,6 @@
     .button1 {
         height: 26px;
         padding: 5px 7px;
-        /* margin-right: 20px; */
         border-radius: 4px;
     }
 
@@ -388,17 +386,11 @@
     }
 }
 @media (min-width:1350px) {
-    .phone {
-        max-width: 450px;
-    }
-    .white{
-        width: 25%;
-    }
-    .wrap-phone{
-        display: flex;
-        justify-content: center;
-    }
-    .bg{
+    .wrap-left {
         max-width: 535px;
+    }
+
+    .left {
+        justify-content: center;
     }
 }

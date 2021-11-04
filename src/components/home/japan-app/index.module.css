@@ -58,7 +58,6 @@
 
 .phone {
     width: 100%;
-    position: relative;
 }
 
 .white {
@@ -356,18 +355,12 @@
     }
 }
 @media (min-width:1350px) {
-    .phone {
-        max-width: 450px;
-    }
-    .white{
-        width: 25%;
-    }
-    .wrap-phone{
-        display: flex;
-        justify-content: center;
-    }
-    .bg{
+    .wrap-left {
         max-width: 535px;
+    }
+
+    .left {
+        justify-content: center;
     }
 }
 
