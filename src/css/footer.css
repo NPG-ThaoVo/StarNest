@@ -125,6 +125,22 @@
   top: -39px;
 }
 
+@media (min-width: 769px) and (max-width: 1280px) {
+  .footer-quick-link {
+    flex-wrap: wrap;
+  }
+
+  .footer-block {
+    width: 25%;
+    flex-basis: 25%;
+  }
+
+  .footer-block:last-child {
+    width: 100%;
+    flex-basis: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .footer-container {
     padding: 40px 24px 36px;

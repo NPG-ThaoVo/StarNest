@@ -233,4 +233,8 @@
   .header-visible {
     top: -24px;
   }
+
+  .button-to-top__hide {
+    bottom: -50px;
+  }
 }
