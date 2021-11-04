@@ -53,13 +53,16 @@ const Header = (props) => {
   }, []);
 
   const scrollToTop = (e) => {
-    document
-      .getElementById("top-of-the-page")
-      .scrollIntoView({ behavior: "smooth" });
+    document.getElementById("top-of-the-page").scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "end"
+    });
   };
 
   return (
     <>
+      <div id="top-of-the-page" className="header-placeholder"></div>
       <nav
         ref={navRef}
         className={`header-container ${
@@ -101,7 +104,6 @@ const Header = (props) => {
           </label>
         </div>
       </nav>
-      <div id="top-of-the-page" className="header-placeholder"></div>
       <div className={`button-to-top ${onTop && "button-to-top__hide"}`}>
         <button onClick={scrollToTop}>
           <img alt="Button submit" src="/imgs/arrow-right.svg" />
