@@ -21,7 +21,7 @@
 
 .header-placeholder {
   position: relative;
-  height: 130px;
+  /* height: 130px; */
   width: 100%;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .header-logo-container {
-  padding-right: 8px;
+  padding-right: 16px;
 }
 
 .header-logo-image {
@@ -71,11 +71,11 @@
   color: #1b3765;
   text-decoration: none;
   font-size: 24px;
-  line-height: 35px;
+  line-height: 24px;
   font-style: normal;
   font-weight: 400;
 }
-.route-item:hover{
+.route-item:hover {
   color: #71ba44;
   font-weight: bold;
 }
@@ -139,6 +139,22 @@
 
 .header-mobile-cover {
   display: none;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header-container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .header-logo-image {
+    min-width: 220px;
+  }
+
+  .route-item {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
@@ -241,5 +257,12 @@
 
   .button-to-top__hide {
     bottom: -50px;
+  }
+}
+
+@media (max-width: 350px) {
+  .header-container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
