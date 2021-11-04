@@ -168,7 +168,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .footer-container {
     padding: 40px 24px 36px;
   }
@@ -181,6 +181,7 @@
 
   .footer-form {
     border-radius: 4px;
+    width: 100%;
   }
 
   .footer-block:last-child {
