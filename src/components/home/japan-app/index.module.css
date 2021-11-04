@@ -12,6 +12,7 @@
     margin-top: 20px;
     position: relative;
     /* max-width: 1442px; */
+    width: 100%;
 }
 
 .brush {
@@ -36,7 +37,7 @@
     line-height: 26px;
     text-align: center;
     color: #FAF6F8;
-    width: 672px;
+    max-width: 672px;
 }
 
 .wrap {

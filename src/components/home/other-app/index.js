@@ -49,10 +49,12 @@ export default function OtherApps(){
                         </div>
                     </div>
                     <div className={styles['right']}>
+                        <div className={styles['warp-image']}> 
+                            <img src='/imgs/arrow.svg' className={styles['arrow']} alt=''/>
+                        </div>
                         <div className={styles['title-right']}>
                             Prep GOETHE
                             <img src='/imgs/line.svg' className={styles['line']} alt=''/>
-                            <img src='/imgs/arrow.svg' className={styles['arrow']} alt=''/>
                         </div>
                         <div className={styles['content-right']}>
                             Let the App help you increase 30 Goethe points.
