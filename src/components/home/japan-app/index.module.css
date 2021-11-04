@@ -11,7 +11,7 @@
     align-items: center;
     margin-top: 20px;
     position: relative;
-    max-width: 1442px;
+    /* max-width: 1442px; */
 }
 
 .brush {
@@ -122,7 +122,6 @@
     font-size: 20px;
     line-height: 26px;
 }
-
 .button1 {
     border-radius: 8px;
     height: 60px;
@@ -206,7 +205,7 @@
 }
 
 
-@media (max-width:780px) {
+@media (max-width:800px) {
     .max-wrap {
         padding: 20px 24px 50px;
     }
@@ -351,6 +350,25 @@
         padding-left: 0px;
     }
 }
-
+@media (max-width:350px) {
+    .wrap-button img{
+        display: none;
+    }
+}
+@media (min-width:1350px) {
+    .phone {
+        max-width: 450px;
+    }
+    .white{
+        width: 25%;
+    }
+    .wrap-phone{
+        display: flex;
+        justify-content: center;
+    }
+    .bg{
+        max-width: 535px;
+    }
+}
 
 

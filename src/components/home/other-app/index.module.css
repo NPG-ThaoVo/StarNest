@@ -12,7 +12,7 @@
     position: relative;
     margin-top: -139px;
     background: transparent;
-    max-width: 1442px;
+    /* max-width: 1442px; */
 }
 
 .brush {
@@ -162,7 +162,7 @@
 
 @media (max-width:1290px) {
     .max-wrap {
-        padding: 20px 120px 50px;
+        padding: 20px 120px 240px;
         margin-top: -144px;
     }
 
@@ -264,7 +264,7 @@
 @media (max-width:600px) {
     .max-wrap {
         padding: 0px 17px 50px 24px;
-        margin-top: -45px;
+        margin-top: -55px;
     }
 
     .title-right {
@@ -376,4 +376,29 @@
     }
 
 }
-
+@media (max-width:350px) {
+    .wrap-button img{
+        display: none;
+    }
+    .max-wrap {
+        margin-top: 0;
+    }
+    .arrow {
+        width: 20%;
+    }
+}
+@media (min-width:1350px) {
+    .phone {
+        max-width: 450px;
+    }
+    .white{
+        width: 25%;
+    }
+    .wrap-phone{
+        display: flex;
+        justify-content: center;
+    }
+    .bg{
+        max-width: 535px;
+    }
+}
