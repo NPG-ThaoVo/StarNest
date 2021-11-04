@@ -30,6 +30,7 @@ const Header = (props) => {
 
   useEffect(() => {
     const handleSctroll = (e) => {
+      console.log(window.pageYOffset);
       if (window.pageYOffset >= 70) onTop && setOnTop(false);
       else !onTop && setOnTop(true);
     };
