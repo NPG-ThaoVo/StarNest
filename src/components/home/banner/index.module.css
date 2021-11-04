@@ -52,7 +52,25 @@
     color: #1B3765;
 }
 
-@media (max-width:960px) {
+@media (max-width:1024px) {
+
+    .container {
+        padding: 90px 80px 0px;
+    }
+
+    .title {
+        font-size: 42px;
+        line-height: 48px;
+    }
+
+    .content {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+
+@media (max-width:780px) {
     .wrap {
         flex-direction: column;
         margin-top: 39px;
