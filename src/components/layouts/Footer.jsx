@@ -6,6 +6,9 @@ const loadingImg = "/imgs/puff.svg";
 const errorImg = "/imgs/error.svg";
 const checkedImg = "/imgs/checked.svg";
 
+const emailRegex =
+  /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+
 const quickLinks = [
   {
     title: "Top Products",
@@ -97,6 +100,7 @@ const Footer = (props) => {
   const form = useRef();
   const [isSending, setIsSending] = useState(false);
   const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState(false);
   const [imgSrc, setImgSrc] = useState(sendImg);
 
   const sendEmail = (e) => {
@@ -104,7 +108,13 @@ const Footer = (props) => {
   };
 
   const handleChageMail = (e) => {
-    setEmail(e.target.value);
+    const emailValue = e.target.value;
+
+    setEmail(emailValue);
+    if (emailValue.length <= 0) return emailError && setEmailError(false);
+
+    if (emailRegex.test(emailValue)) emailError && setEmailError(false);
+    else !emailError && setEmailError(true);
   };
 
   return (
@@ -139,19 +149,25 @@ const Footer = (props) => {
             <form ref={form} onSubmit={sendEmail}>
               <div className="form-container">
                 <input
+                  id="input-email"
                   name="email"
                   type="text"
                   value={email}
                   onChange={handleChageMail}
                   placeholder="Your email address"
                   disabled={isSending}
+                  required
                 />
+
                 <button type="submit" disabled={isSending}>
                   <img src={imgSrc} alt="submit" />
                 </button>
               </div>
             </form>
           </div>
+          <label className="label-email-error" htmlFor="input-email">
+            {emailError && `Email is not valid`}
+          </label>
         </div>
       </div>
       <div className="copyright">2021 © StarNest</div>
