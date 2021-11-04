@@ -130,6 +130,7 @@
     padding: 10px 20px;
     margin-right: 60px;
     text-decoration: none;
+    flex-wrap: nowrap;
 }
 
 .button1:hover {
@@ -285,6 +286,7 @@
         margin-right: 20px;
         border-radius: 4px;
         flex-wrap: nowrap;
+        min-width: 70px;
     }
 
     .button1 div {
@@ -296,6 +298,7 @@
         padding: 7px;
         border-radius: 4px;
         flex-wrap: nowrap;
+        min-width: 70px;
     }
     
     .button2 div {
