@@ -2,9 +2,6 @@ import React, { useRef, useState } from "react";
 import "../../css/footer.css";
 
 const sendImg = "/imgs/arrow-right.svg";
-const loadingImg = "/imgs/puff.svg";
-const errorImg = "/imgs/error.svg";
-const checkedImg = "/imgs/checked.svg";
 
 const emailRegex =
   /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
@@ -98,10 +95,8 @@ const quickLinks = [
 
 const Footer = (props) => {
   const form = useRef();
-  const [isSending, setIsSending] = useState(false);
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState(false);
-  const [imgSrc, setImgSrc] = useState(sendImg);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -155,12 +150,15 @@ const Footer = (props) => {
                   value={email}
                   onChange={handleChageMail}
                   placeholder="Your email address"
-                  disabled={isSending}
+                  // disabled={isSending}
                   required
                 />
 
-                <button type="submit" disabled={isSending}>
-                  <img src={imgSrc} alt="submit" />
+                <button
+                  type="submit"
+                  // disabled={isSending}
+                >
+                  <img src={sendImg} alt="submit" />
                 </button>
               </div>
             </form>

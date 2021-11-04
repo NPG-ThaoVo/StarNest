@@ -30,7 +30,6 @@ const Header = (props) => {
 
   useEffect(() => {
     const handleSctroll = (e) => {
-      console.log(window.pageYOffset);
       if (window.pageYOffset >= 70) onTop && setOnTop(false);
       else !onTop && setOnTop(true);
     };
@@ -105,7 +104,7 @@ const Header = (props) => {
       <div id="top-of-the-page" className="header-placeholder"></div>
       <div className={`button-to-top ${onTop && "button-to-top__hide"}`}>
         <button onClick={scrollToTop}>
-          <img src="/imgs/arrow-right.svg" />
+          <img alt="Button submit" src="/imgs/arrow-right.svg" />
         </button>
       </div>
     </>
