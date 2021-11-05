@@ -19,11 +19,21 @@ export default function OtherApps(){
                             With more than 5,000 questions and 60 Korean exams simulator will be the exam preparation book to store your progress.
                         </div>
                         <div className={styles['wrap-button']}>
-                            <a className={styles['button1']} href='/' target="_blank">
+                            <a
+                                className={styles['button1']}
+                                href='https://apps.apple.com/us/app/topik-test-learn-korean/id1570146540'
+                                target="_blank"
+                                rel='noreferrer'
+                            >
                                 <img src='/imgs/white-apple.svg' alt=''/>
                                 <div>App Store</div>
                             </a>
-                            <a className={styles['button2']} href='/' target="_blank">
+                            <a
+                                className={styles['button2']}
+                                href='https://play.google.com/store/apps/details?id=com.topiktest'
+                                target="_blank"
+                                rel='noreferrer'
+                            >
                                 <img src='/imgs/black-android.svg' alt=''/>
                                 <div>Play Store</div>
                             </a>
@@ -59,11 +69,21 @@ export default function OtherApps(){
                             With more than 5,000 German questions and 60 German exams simulator will be the exam preparation book to store your progress.
                         </div>
                         <div className={styles['wrap-button']}>
-                            <a className={styles['button1']} href='/' target="_blank">
+                            <a
+                                className={styles['button1']}
+                                href='https://apps.apple.com/us/app/prep-goethe-deutsch-lernen/id1572225086'
+                                target="_blank"
+                                rel='noreferrer'
+                            >
                                 <img src='/imgs/white-apple.svg' alt=''/>
                                 <div>App Store</div>
                             </a>
-                            <a className={styles['button2']} href='/' target="_blank">
+                            <a
+                                className={styles['button2']}
+                                href='https://play.google.com/store/apps/details?id=com.goethetest'
+                                target="_blank"
+                                rel='noreferrer'
+                            >
                                 <img src='/imgs/black-android.svg' alt=''/>
                                 <div>Play Store</div>
                             </a>
@@ -81,11 +101,21 @@ export default function OtherApps(){
                             This app helps you increase 90 TOEIC points in the TOEIC test. Over 10,000 TOEIC questions and 100 TOEIC exams from the previous year will be your exam preparation book to save your progress.
                         </div>
                         <div className={styles['wrap-button']}>
-                            <a className={styles['button1']} href='/' target="_blank">
+                            <a
+                                className={styles['button1']}
+                                href='https://apps.apple.com/us/app/prep-for-the-toeic-test/id1574067773'
+                                target="_blank"
+                                rel='noreferrer'
+                            >
                                 <img src='/imgs/white-apple.svg' alt=''/>
                                 <div>App Store</div>
                             </a>
-                            <a className={styles['button2']} href='/' target="_blank">
+                            <a
+                                className={styles['button2']}
+                                href='https://play.google.com/store/apps/details?id=com.toeictest'
+                                target="_blank"
+                                rel='noreferrer'
+                            >
                                 <img src='/imgs/black-android.svg' alt=''/>
                                 <div>Play Store</div>
                             </a>
