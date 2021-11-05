@@ -15,7 +15,7 @@ export default function Banner(){
                 <div className={styles['wrap']}>
                     <div className={styles['left']}>
                         <div className={styles['content']}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna felis est nisl rutrum. Amet venenatis vel vitae turpis tortor egestas sit rhoncus.
+                            The road to conquer a new language is full of challenge barriers. We will accompany you to hit the peaks.
                         </div>
                     </div>
                     <div className={styles['right']}>

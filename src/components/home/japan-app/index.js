@@ -33,11 +33,21 @@ export default function JapanApp(){
                             Let experience the HERMANN EBBINGHAUS FORGETTING CURVE memorization method to help you feel more confident in the upcoming exam.
                         </div>
                         <div className={styles['wrap-button']}>
-                            <a className={styles['button1']} href='/' target="_blank">
+                            <a
+                                className={styles['button1']}
+                                href='https://apps.apple.com/us/app/jlpt-japanese-test-practice/id1564455047'
+                                target="_blank"
+                                rel='noreferrer'
+                            >
                                 <img src='/imgs/black-apple.svg' alt=''/>
                                 <div>App Store</div>
                             </a>
-                            <a className={styles['button2']} href='/' target="_blank">
+                            <a
+                                className={styles['button2']}
+                                href='https://play.google.com/store/apps/details?id=com.jlpttest'
+                                target="_blank"
+                                rel='noreferrer'
+                            >
                                 <img src='/imgs/white-android.svg' alt=''/>
                                 <div>Play Store</div>
                             </a>
