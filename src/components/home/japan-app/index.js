@@ -11,7 +11,7 @@ export default function JapanApp(){
                     Explore our Applications
                 </div>
                 <div className={styles['content']}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, suspendisse consequat duis sapien mattis. Amet nisi, odio commodo mauris lacus.
+                    We provide the most effective, time-saving, cost-effective practice tests and language learning apps.
                 </div>
                 <div className={styles['wrap']}>
                     <div className={styles['left']}>
