@@ -7,7 +7,7 @@ function Decorate() {
       <div className={styles['image-container']}>
         {/* <img src="./imgs/decorate-keyboard.png" alt="keyboard" /> */}
         <img
-          srcset="./imgs/decorate-keyboard-2x.png 2x"
+          srcSet="./imgs/decorate-keyboard-2x.png 2x"
           alt="keyboard"
           className={styles['image']}
         />

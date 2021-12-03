@@ -69,6 +69,10 @@ span {
 }
 
 #test {
+  display: inline-block;
+}
+
+#test {
   word-wrap: break-word;
   white-space: pre-line;
 }
@@ -94,6 +98,12 @@ span {
   align-items: center;
 }
 
+@media screen and (max-width: 1279px) {
+  .header-title {
+    min-width: auto;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .container {
     padding-left: 32px;
@@ -101,7 +111,7 @@ span {
 
   .header-wrap {
     /* margin: 209px 70px 0 100px; */
-    gap: 0px;
+    gap: 78px;
     /* width: 100vw; */
   }
 

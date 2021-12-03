@@ -45,6 +45,8 @@ function Header() {
               <strong
                 className={styles['purple-gradient-text']}
               >{` much more interesting `}</strong>
+              <br />
+              when you have
               <strong
                 className={styles['gradient-text']}
               >{` a good taste in art!`}</strong>
