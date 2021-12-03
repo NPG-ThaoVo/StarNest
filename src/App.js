@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages';
-import Kedo from './pages/kedo';
+import Kebo from './pages/kebo';
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/kedo" element={<Kedo />} />
+      <Route path="/kebo" element={<Kebo />} />
     </Routes>
   );
 }
