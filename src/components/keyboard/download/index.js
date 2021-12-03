@@ -15,14 +15,14 @@ function Download() {
           <img
             src="./imgs/app-store.png"
             alt="app-store"
-            className={styles['button']}
+            className={`${styles['button']} ${styles['download-app-store']}`}
           />
         </div>
-        <div className={styles['button-wrap']}>
+        <div className={`${styles['button-wrap']}`}>
           <img
             src="./imgs/google-play.png"
             alt="google-play"
-            className={styles['button']}
+            className={`${styles['button']} ${styles['download-google-play']}`}
           />
         </div>
       </div>

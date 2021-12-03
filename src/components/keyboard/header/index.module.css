@@ -166,6 +166,7 @@ span {
   .header-wrap {
     flex-direction: column;
     justify-content: center;
+    gap: 0;
   }
 
   .header-title {
@@ -173,7 +174,7 @@ span {
     justify-content: center;
     align-items: center; */
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 
     font-size: 36px;
     line-height: 54px;
@@ -204,6 +205,10 @@ span {
 @media screen and (max-width: 450px) {
   .container {
     margin-top: 120px;
+  }
+
+  .ellipse-1 {
+    width: 60%;
   }
 
   .header-wrap {

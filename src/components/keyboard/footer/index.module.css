@@ -191,6 +191,10 @@
     line-height: 21px;
   }
 
+  .social-btn {
+    width: 80%;
+  }
+
   .decorate-1,
   .decorate-2 {
     max-width: 150px;

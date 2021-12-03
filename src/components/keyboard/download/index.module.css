@@ -85,8 +85,16 @@
     line-height: 42px;
   }
 
-  .button {
-    width: 80%;
-    height: 80%;
+  .download-btns {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .download-app-store {
+    width: 100px;
+  }
+
+  .download-google-play {
+    width: 110px;
   }
 }
