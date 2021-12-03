@@ -52,6 +52,17 @@ function Footer() {
         className={styles['decorate-2']}
         alt="decoration"
       />
+
+      <img
+        srcSet="./imgs/decorate-2-app.png 2x"
+        className={styles['decorate-1-app']}
+        alt="decoration"
+      />
+      <img
+        srcSet="./imgs/decorate-3-app.png 2x"
+        className={styles['decorate-2-app']}
+        alt="decoration"
+      />
     </div>
   );
 }

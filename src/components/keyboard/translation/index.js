@@ -10,6 +10,12 @@ function Translation() {
           keyboards
         </span>
       </div>
+      <div className={styles['content-app']}>
+        <span className={styles['content-text']}>
+          <strong>Connect</strong> with friends from all over the world with
+          translation keyboards
+        </span>
+      </div>
       <div className={styles['image-container']}>
         <img
           src="./imgs/translation.png"

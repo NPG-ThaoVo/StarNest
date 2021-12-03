@@ -71,6 +71,7 @@
 }
 
 .textarea {
+  font-family: 'Helvetica';
   width: 486px;
   height: 200px;
   padding: 18px 18px;
@@ -78,12 +79,11 @@
   border: none;
   outline: none;
   border-radius: 5px;
-  font-family: 'Be Vietnam';
   resize: none;
 }
 
 .send-button {
-  margin-top: 53px;
+  margin-top: 40px;
   padding: 13px 41px;
 
   border: none;
@@ -95,6 +95,11 @@
   font-size: 24px;
   line-height: 30px;
   cursor: pointer;
+}
+
+.decorate-1-app,
+.decorate-2-app {
+  display: none;
 }
 
 @media screen and (max-width: 1024px) {
@@ -173,7 +178,7 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
   .container {
     padding-bottom: 20px;
   }
@@ -199,5 +204,97 @@
   .decorate-2 {
     max-width: 150px;
     object-fit: cover;
+  }
+} */
+
+@media screen and (max-width: 769px) {
+  .container {
+    margin-top: 31px;
+    padding: 16px 16px 0 16px;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+
+  .content {
+    text-align: left;
+  }
+
+  .header {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .social-media {
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  .social-btn img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .form {
+    padding-bottom: 0;
+  }
+
+  .input-wrap {
+    justify-content: flex-start;
+  }
+
+  .input,
+  .textarea {
+    width: 100%;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 10px 12px;
+  }
+
+  .input::placeholder,
+  .textarea::placeholder {
+    color: #bbbbbb;
+  }
+
+  .input {
+    height: 33px;
+    margin-bottom: 10px;
+    /* padding: 10 12px; */
+  }
+
+  .textarea {
+    height: 119px;
+  }
+
+  .send-button {
+    margin-top: 24px;
+    margin-bottom: 67px;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 8px 24px;
+  }
+
+  .decorate-1,
+  .decorate-2 {
+    display: none;
+  }
+
+  .decorate-1-app,
+  .decorate-2-app {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .decorate-1-app {
+    left: 0;
+  }
+
+  .decorate-2-app {
+    right: 0;
   }
 }

@@ -12,9 +12,14 @@ function Decorate() {
           className={styles['image']}
         />
       </div>
-      <div className={styles['title']}>
+      <div className={styles['description']}>
         Decorate, design your own keyboard uniquely with 300 themes, effects,
         lens and swipes ...
+      </div>
+      <div className={styles['description-app']}>
+        <strong className={styles['description-header']}>Decorate,</strong>
+        design your own keyboard uniquely with 300 themes, effects, lens and
+        swipes ...
       </div>
     </div>
   );

@@ -79,7 +79,7 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
   .title {
     font-size: 28px;
     line-height: 42px;
@@ -96,5 +96,40 @@
 
   .download-google-play {
     width: 110px;
+  }
+} */
+
+@media screen and (max-width: 769px) {
+  .container {
+    margin-top: 40px;
+    display: block;
+    padding: 0 17px;
+  }
+
+  .button-wrap {
+    flex-direction: row;
+  }
+
+  .title-download {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .download-text {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .download-btns {
+    margin-top: 16px;
+    gap: 20px;
+  }
+
+  .download-app-store {
+    width: 85px;
+  }
+
+  .download-google-play {
+    width: 96px;
   }
 }

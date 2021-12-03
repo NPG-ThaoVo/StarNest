@@ -5,8 +5,10 @@ function Download() {
   return (
     <div className={styles['container']}>
       <div className={styles['title']}>
-        <span className={styles['purple-gradient-text']}>
-          <strong>{`Download `}</strong>
+        <span
+          className={`${styles['title-download']} ${styles['purple-gradient-text']}`}
+        >
+          <strong className={styles['download-text']}>{`Download `}</strong>
           now!
         </span>
       </div>

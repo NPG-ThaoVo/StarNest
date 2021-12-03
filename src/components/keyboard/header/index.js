@@ -10,6 +10,11 @@ function Header() {
           className={styles['ribbon']}
           alt="decoration"
         />
+        <img
+          srcSet="./imgs/decorate-1-app.png 2x"
+          className={styles['ribbon-app']}
+          alt=""
+        />
       </div>
       <div className={styles['container']}>
         <div className={styles['header-wrap']}>
@@ -26,7 +31,7 @@ function Header() {
               ' ' +
               styles['header-content'] +
               ' ' +
-              styles['pink-text']
+              styles['gradient-text']
             }
           >
             {/* <span className={styles['header-content']}> */}
@@ -40,23 +45,26 @@ function Header() {
               <strong>{` a good taste in art!`}</strong>
             </span> */}
             {/* </span> */}
-            <p id="test">
+            <span id="test" className={styles['header-description']}>
               Life is
               <strong
                 className={styles['purple-gradient-text']}
               >{` much more interesting `}</strong>
               <br />
               when you have
-              <strong
-                className={styles['gradient-text']}
-              >{` a good taste in art!`}</strong>
-            </p>
+              <strong className={styles['']}>{` a good taste in art!`}</strong>
+            </span>
           </div>
           <div className={styles['image-container']}>
             <img
               src="./imgs/ellipse-2.png"
               alt="ellipse"
               className={styles['ellipse-2']}
+            />
+            <img
+              src="./imgs/header-image-app.png"
+              alt=""
+              className={styles['ellipse-2-app']}
             />
           </div>
         </div>
