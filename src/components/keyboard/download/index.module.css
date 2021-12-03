@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  align-items: center;
+
+  margin-top: 100px;
+  padding-left: 121px;
+}
+
+.title {
+  font-size: 64px;
+  line-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.purple-gradient-text {
+  background: -webkit-linear-gradient(#5a0389, #553bd2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.download-btns {
+  display: inline-flex;
+  gap: 64px;
+  align-items: center;
+  margin-left: 153px;
+}
+
+.button-wrap {
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-left: 70px;
+  }
+
+  .title {
+    font-size: 52px;
+    line-height: 78px;
+  }
+
+  .download-btns {
+    margin-left: 100px;
+    gap: 24px;
+  }
+
+  .button {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    flex-direction: column;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 54px;
+  }
+
+  .download-btns {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .button-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .container {
+    margin-top: 40px;
+    display: block;
+    padding: 0 17px;
+  }
+
+  .button-wrap {
+    flex-direction: row;
+  }
+
+  .title-download {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .download-text {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .download-btns {
+    margin-top: 16px;
+    gap: 20px;
+  }
+
+  .download-app-store {
+    width: 85px;
+  }
+
+  .download-google-play {
+    width: 96px;
+  }
+}
