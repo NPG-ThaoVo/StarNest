@@ -1,7 +1,7 @@
 import React from 'react';
 import Keyboard from '../components/keyboard';
 
-const KeyboardPage = () => {
+const Kedo = () => {
   return (
     <div style={{ overflowX: 'hidden' }}>
       <Keyboard></Keyboard>
@@ -9,4 +9,4 @@ const KeyboardPage = () => {
   );
 };
 
-export default KeyboardPage;
+export default Kedo;

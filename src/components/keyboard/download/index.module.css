@@ -79,26 +79,6 @@
   }
 }
 
-/* @media screen and (max-width: 450px) {
-  .title {
-    font-size: 28px;
-    line-height: 42px;
-  }
-
-  .download-btns {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .download-app-store {
-    width: 100px;
-  }
-
-  .download-google-play {
-    width: 110px;
-  }
-} */
-
 @media screen and (max-width: 769px) {
   .container {
     margin-top: 40px;

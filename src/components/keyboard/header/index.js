@@ -34,17 +34,6 @@ function Header() {
               styles['gradient-text']
             }
           >
-            {/* <span className={styles['header-content']}> */}
-            {/* <span className={styles['pink-text']}>{`Life is `}</span> */}
-            {/* Life is
-            <strong
-              className={styles['purple-gradient-text']}
-            >{` much more interesting `}</strong>
-            <span className={styles['gradient-text']}>
-              when you have
-              <strong>{` a good taste in art!`}</strong>
-            </span> */}
-            {/* </span> */}
             <span id="test" className={styles['header-description']}>
               Life is
               <strong

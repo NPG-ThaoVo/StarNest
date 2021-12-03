@@ -58,21 +58,6 @@
   }
 }
 
-/* @media screen and (max-width: 450px) {
-  .container {
-    margin-top: 0;
-  }
-
-  .content {
-    font-size: 14px;
-    line-height: 21px;
-  }
-
-  .image {
-    width: var(--imageWidth450);
-  }
-} */
-
 @media screen and (max-width: 769px) {
   .container {
     padding: 0 16px;

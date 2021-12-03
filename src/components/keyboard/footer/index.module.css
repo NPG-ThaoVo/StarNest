@@ -54,7 +54,6 @@
 }
 
 .form {
-  /* padding-right: 222px; */
   width: 100%;
   padding-bottom: 98px;
 }
@@ -178,35 +177,6 @@
   }
 }
 
-/* @media screen and (max-width: 450px) {
-  .container {
-    padding-bottom: 20px;
-  }
-
-  .header {
-    font-size: 28px;
-    line-height: 42px;
-  }
-
-  .description,
-  .input,
-  .textarea,
-  .send-button {
-    font-size: 14px;
-    line-height: 21px;
-  }
-
-  .social-btn {
-    width: 80%;
-  }
-
-  .decorate-1,
-  .decorate-2 {
-    max-width: 150px;
-    object-fit: cover;
-  }
-} */
-
 @media screen and (max-width: 769px) {
   .container {
     margin-top: 31px;
@@ -263,7 +233,6 @@
   .input {
     height: 33px;
     margin-bottom: 10px;
-    /* padding: 10 12px; */
   }
 
   .textarea {

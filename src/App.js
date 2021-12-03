@@ -1,9 +1,14 @@
-// import Home from './pages';
-import Keyboard from './pages/keyboard';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages';
+import Kedo from './pages/kedo';
 
 function App() {
-  // return <Home />;
-  return <Keyboard></Keyboard>;
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/kedo" element={<Kedo />} />
+    </Routes>
+  );
 }
 
 export default App;
