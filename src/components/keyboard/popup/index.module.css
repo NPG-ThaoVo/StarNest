@@ -3,8 +3,19 @@
   --modalHeight: 465px;
 }
 
+/* .popup-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+  background: rgb(148 156 183 / 72%);
+} */
+
 .popup {
   position: fixed;
+  opacity: 1;
   z-index: 12;
   /* left: 50%;
   transform: translate(-50%, 0); */
@@ -26,6 +37,7 @@
 }
 
 .popup-main-wrapper {
+  opacity: 1;
   border-radius: 10px;
   box-shadow: 0px 3px 6px #00000029;
   background: #ffffff 0% 0% no-repeat padding-box;
