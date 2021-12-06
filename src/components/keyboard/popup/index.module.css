@@ -1,0 +1,134 @@
+:root {
+  --modalWidth: 400px;
+  --modalHeight: 465px;
+}
+
+.popup {
+  position: fixed;
+  z-index: 12;
+  /* left: 50%;
+  transform: translate(-50%, 0); */
+  top: calc(50% - calc(var(--modalHeight) / 2));
+  left: calc(50% - calc(var(--modalWidth) / 2));
+}
+
+.popup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.popup-main-wrapper {
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px #00000029;
+  background: #ffffff 0% 0% no-repeat padding-box;
+
+  flex-direction: column;
+
+  width: var(--modalWidth);
+  height: var(--modalHeight);
+}
+
+.popup-image-wrapper {
+  padding: 70px 142px 0 142px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-alert {
+  padding-top: 50px;
+}
+
+.popup-title {
+  text-align: center;
+
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.popup-description {
+  margin-top: 28px;
+  padding-left: 62px;
+  padding-right: 62px;
+
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.popup-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 69px;
+}
+
+.popup-button {
+  outline: none;
+  border: none;
+  background-color: #ffffff;
+  color: #553bd2;
+  font-size: 16px;
+  line-height: 25px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
+  :root {
+    --modalWidth: 240px;
+    --modalHeight: 260px;
+  }
+
+  .popup-close {
+    width: 10px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .popup-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 0 0;
+  }
+
+  .popup-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .popup-description {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    text-align: center;
+  }
+
+  .popup-alert {
+    padding-top: 20px;
+  }
+
+  .popup-icon {
+    width: 120px;
+  }
+
+  .popup-button-wrapper {
+    margin-top: 20px;
+  }
+
+  .popup-button {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

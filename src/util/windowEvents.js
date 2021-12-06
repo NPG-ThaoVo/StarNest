@@ -66,19 +66,67 @@ export const registerSwipeEvent = (
     }
   };
 
-  window.addEventListener("wheel", handleWheel, true);
-  window.addEventListener("touchstart", handleTouchStart, true);
-  window.addEventListener("touchmove", handleTouchMove, true);
-  window.addEventListener("touchend", handleTouchEnd, true);
-  window.addEventListener("touchcancel", handleTouchCancel, true);
-  window.addEventListener("scroll", handleScroll, true);
+  window.addEventListener('wheel', handleWheel, true);
+  window.addEventListener('touchstart', handleTouchStart, true);
+  window.addEventListener('touchmove', handleTouchMove, true);
+  window.addEventListener('touchend', handleTouchEnd, true);
+  window.addEventListener('touchcancel', handleTouchCancel, true);
+  window.addEventListener('scroll', handleScroll, true);
 
   return () => {
-    window.removeEventListener("wheel", handleWheel, true);
-    window.removeEventListener("touchstart", handleTouchStart, true);
-    window.removeEventListener("touchmove", handleTouchMove, true);
-    window.removeEventListener("touchend", handleTouchEnd, true);
-    window.removeEventListener("touchcancel", handleTouchCancel, true);
-    window.removeEventListener("scroll", handleScroll, true);
+    window.removeEventListener('wheel', handleWheel, true);
+    window.removeEventListener('touchstart', handleTouchStart, true);
+    window.removeEventListener('touchmove', handleTouchMove, true);
+    window.removeEventListener('touchend', handleTouchEnd, true);
+    window.removeEventListener('touchcancel', handleTouchCancel, true);
+    window.removeEventListener('scroll', handleScroll, true);
   };
 };
+
+/* Enable/Disable scroll */
+var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+
+function preventDefault(e) {
+  e.preventDefault();
+}
+
+function preventDefaultForScrollKeys(e) {
+  if (keys[e.keyCode]) {
+    preventDefault(e);
+    return false;
+  }
+}
+
+// modern Chrome requires { passive: false } when adding event
+var supportsPassive = false;
+try {
+  window.addEventListener(
+    'test',
+    null,
+    Object.defineProperty({}, 'passive', {
+      get: function () {
+        supportsPassive = true;
+      },
+    })
+  );
+} catch (e) {}
+
+var wheelOpt = supportsPassive ? { passive: false } : false;
+var wheelEvent =
+  'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+// call this to Disable
+export function disableScroll() {
+  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+// call this to Enable
+export function enableScroll() {
+  window.removeEventListener('DOMMouseScroll', preventDefault, false);
+  window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+  window.removeEventListener('touchmove', preventDefault, wheelOpt);
+  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+}
