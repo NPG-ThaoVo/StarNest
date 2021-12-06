@@ -14,7 +14,7 @@ function Popup(props) {
         <div className={styles['popup-main-wrapper']}>
           <div className={styles['popup-image-wrapper']}>
             <img
-              src="./imgs/icon-popup.svg"
+              src="./imgs/icon-vali.svg"
               alt=""
               style={{ display: 'block' }}
               className={styles['popup-icon']}
