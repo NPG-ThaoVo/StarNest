@@ -3,8 +3,7 @@ import styles from './index.module.css';
 import Popup from '../popup';
 import { enableScroll, disableScroll } from '../../../util/windowEvents';
 
-const emailRegex =
-  /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/gm;
+const emailRegex = /^[a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/gm;
 
 function Footer(props) {
   const [email, setEmail] = useState('');
@@ -22,10 +21,11 @@ function Footer(props) {
   };
 
   const validateEmail = () => {
-    if (emailRegex.test(email.trim())) {
-      setEmailError(false);
-    } else {
+    const emailInput = email.trim();
+    if (!emailRegex.test(emailInput)) {
       setEmailError(true);
+    } else {
+      setEmailError(false);
     }
   };
 
@@ -38,13 +38,13 @@ function Footer(props) {
   };
 
   const handleSubmit = async () => {
+    validateEmail();
+    validateContent();
     if (!emailError && !contentError) {
-      const data = { EMAIL: email, CONTENT: content };
+      const data = { EMAIL: email, CONTENT: content.trim() };
       setPopup(true);
       props.showFirework();
       disableScroll();
-      setEmail('');
-      setContent('');
 
       try {
         await fetch(
@@ -58,6 +58,10 @@ function Footer(props) {
             body: JSON.stringify(data),
           }
         );
+        setEmail('');
+        setContent('');
+        setEmailError(true);
+        setEmailError(true);
       } catch (err) {
         console.log('Error: ', err);
       }
@@ -102,6 +106,7 @@ function Footer(props) {
               value={email}
               onChange={handleEmail}
               onBlur={validateEmail}
+              // onFocus={validateEmail}
               style={
                 emailError ? { outline: '1px solid red' } : { outline: 'none' }
               }
