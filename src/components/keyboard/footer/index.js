@@ -41,7 +41,7 @@ function Footer(props) {
     validateEmail();
     validateContent();
     if (!emailError && !contentError) {
-      const data = { EMAIL: email, CONTENT: content };
+      const data = { EMAIL: email, CONTENT: content.trim() };
       setPopup(true);
       props.showFirework();
       disableScroll();
