@@ -40,6 +40,11 @@ function Footer(props) {
   const handleSubmit = async () => {
     if (!emailError && !contentError) {
       const data = { EMAIL: email, CONTENT: content };
+      setPopup(true);
+      props.showFirework();
+      disableScroll();
+      setEmail('');
+      setContent('');
 
       try {
         await fetch(
@@ -53,12 +58,6 @@ function Footer(props) {
             body: JSON.stringify(data),
           }
         );
-
-        setPopup(true);
-        props.showFirework();
-        disableScroll();
-        setEmail('');
-        setContent('');
       } catch (err) {
         console.log('Error: ', err);
       }
