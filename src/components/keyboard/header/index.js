@@ -34,7 +34,7 @@ function Header() {
               styles['gradient-text']
             }
           >
-            <span id="test" className={styles['header-description']}>
+            <div id="test" className={styles['header-description']}>
               Life is
               <strong
                 className={styles['purple-gradient-text']}
@@ -42,7 +42,7 @@ function Header() {
               <br />
               when you have
               <strong className={styles['']}>{` a good taste in art!`}</strong>
-            </span>
+            </div>
           </div>
           <div className={styles['image-container']}>
             <img
