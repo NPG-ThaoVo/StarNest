@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.purple-gradient-text {
+.description .purple-gradient-text {
   background: -webkit-linear-gradient(#5a0389, #553bd2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
