@@ -5,20 +5,30 @@ import { registerSwipeEvent } from "../../util/windowEvents";
 const routes = [
   {
     name: "Home",
-    url: ""
+    url: "",
+  },
+  {
+    name: "Top Product",
+    url: "",
+    sub: [
+      {
+        nameSub: "Kebo keyboard",
+        urlSub: "",
+      },
+    ],
   },
   {
     name: "About us",
-    url: ""
+    url: "",
   },
   {
     name: "Blog",
-    url: ""
+    url: "",
   },
   {
     name: "Contact us",
-    url: ""
-  }
+    url: "",
+  },
 ];
 
 const Header = (props) => {
@@ -56,7 +66,7 @@ const Header = (props) => {
     document.getElementById("top-of-the-page").scrollIntoView({
       behavior: "smooth",
       block: "end",
-      inline: "end"
+      inline: "end",
     });
   };
 
@@ -70,11 +80,13 @@ const Header = (props) => {
         }`}
       >
         <div className="header-logo-container">
-          <img
-            className="header-logo-image"
-            src="/imgs/logologo.png"
-            alt="Start Nest logo"
-          />
+          <a href="/">
+            <img
+              className="header-logo-image"
+              src="/imgs/logologo.png"
+              alt="Start Nest logo"
+            />
+          </a>
         </div>
         <input
           className="header-menu-checkbox"
@@ -93,6 +105,19 @@ const Header = (props) => {
                 >
                   {route.name}
                 </a>
+                {route.sub ? (
+                  <ul>
+                    {route.sub.map((item, i) => (
+                      <li key={i}>
+                        <a className="route-sub-item" href="/kebo">
+                          {item.nameSub}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <></>
+                )}
               </li>
             ))}
           </ul>
