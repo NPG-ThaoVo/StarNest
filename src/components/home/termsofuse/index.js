@@ -56,7 +56,7 @@ export default function Termsofuse() {
               leaving a comment about your experience.
               <br /> We respect the copyright of the authors, all images or
               icons if there is a dispute or complaint, please contact
-              <a href="/"> kebosupport@starnestsolution.com</a>
+              <a href="mailto:?subject=StartNest QA&body=Question..."> kebosupport@starnestsolution.com</a>
             </p>
             <p>
               <strong>Information collection and use</strong>
@@ -76,7 +76,7 @@ export default function Termsofuse() {
               <strong>Contact us</strong>
               <br /> If you have any questions regarding this Kebo Terms of Use
               you can contact us at
-              <a href="/"> kebosupport@starnestsolution.com</a>
+              <a href="mailto:?subject=StartNest QA&body=Question..."> kebosupport@starnestsolution.com</a>
             </p>
           </div>
         </div>
