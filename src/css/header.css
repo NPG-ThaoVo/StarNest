@@ -140,6 +140,30 @@
 .header-mobile-cover {
   display: none;
 }
+.header-routes ul ul {
+  display: none;
+  position: absolute;
+  padding: 0;
+  background-color: white;
+}
+.header-routes ul ul li {
+  float: none;
+}
+.header-routes ul ul a {
+  text-decoration: none;
+  color: #1b3765;
+}
+.header-routes ul li:hover > ul {
+  display: block;
+  padding-top: 10px;
+}
+.header-routes ul li:hover a {
+  color: #71ba44;
+  font-weight: bold;
+}
+.header-routes ul li:hover .route-sub-item {
+  color: #1b3765;
+}
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .header-container {
@@ -175,7 +199,7 @@
 
 @media (max-width: 800px) {
   .button-to-top button:hover img {
-    transform: none
+    transform: none;
   }
   .header-container {
     padding: 32px 24px 0;
