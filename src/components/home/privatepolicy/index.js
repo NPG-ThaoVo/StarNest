@@ -44,7 +44,7 @@ export default function Content() {
             <p>
               Contact us If you have any questions regarding this Privacy
               Policy, you can contact us at{" "}
-              <a href="/kebo">kebosupport@starnestsolution.com</a>
+            <a href="mailto:?subject=StartNest QA&body=Question...">kebosupport@starnestsolution.com</a>
             </p>
           </div>
         </div>
