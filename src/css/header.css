@@ -217,9 +217,9 @@
   .routes-sub-item {
     font-size: 10px;
   }
-  .button-to-top button:hover img {
+  /* .button-to-top button:hover img {
     transform: none;
-  }
+  } */
   .header-container {
     padding: 32px 24px 0;
     /* position: relative; */
