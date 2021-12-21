@@ -156,6 +156,7 @@
 .header-routes ul li:hover > ul {
   display: block;
   padding-top: 10px;
+  text-decoration: underline;
 }
 .header-routes ul li:hover a {
   color: #71ba44;
@@ -198,6 +199,24 @@
 }
 
 @media (max-width: 800px) {
+  .header-routes-item {
+    position: relative;
+  }
+  .header-routes ul li:hover > ul {
+    padding: 0;
+    top: 20px;
+    right: 0;
+    text-decoration: underline;
+  }
+  .header-routes ul ul {
+    background-color: initial;
+  }
+  .header-routes ul li:hover .route-sub-item {
+    font-size: 10px;
+  }
+  .routes-sub-item {
+    font-size: 10px;
+  }
   .button-to-top button:hover img {
     transform: none;
   }
