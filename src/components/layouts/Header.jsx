@@ -13,7 +13,11 @@ const routes = [
     sub: [
       {
         nameSub: "Kebo keyboard",
-        urlSub: "",
+        urlSub: "/kebo",
+      },
+      {
+        nameSub: "Calendar",
+        urlSub: "/calendar",
       },
     ],
   },
@@ -99,6 +103,9 @@ const Header = (props) => {
               <li key={index} className="header-routes-item">
                 <a
                   href={route.url}
+                  onClick={(e)=>{
+                    if(route.name.includes("Top Product")) e.preventDefault()
+                  }}
                   className={`route-item ${
                     route.name === currentPage && "route-item__selected"
                   }`}
@@ -109,7 +116,7 @@ const Header = (props) => {
                   <ul>
                     {route.sub.map((item, i) => (
                       <li key={i}>
-                        <a className="route-sub-item" href="/kebo">
+                        <a className="route-sub-item" href={item.urlSub}>
                           {item.nameSub}
                         </a>
                       </li>

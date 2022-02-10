@@ -7,11 +7,13 @@
   align-items: center;
   position: relative;
 }
-.calendar {
+.calendar > a {
   font-weight: bold;
   font-size: 32px;
   line-height: 42px;
   text-transform: capitalize;
+  text-decoration: none;
+  color: #333333;
 }
 .paths {
   display: flex;
@@ -38,6 +40,11 @@
   padding: 13px 29px;
   width: 200px;
   height: 56px;
+  cursor: pointer;
+}
+.paths > div > a {
+  text-decoration: none;
+  color: #333333 !important;
 }
 .paths-mobile {
   height: 56px;
@@ -65,16 +72,8 @@
 .menu-mobile > a:first-child {
   font-weight: bold;
 }
-.menu-mobile > div {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* background: #4abb77; */
-  /* border-radius: 12px; */
+.menu-mobile > div > a {
   font-weight: 600;
-  /* padding: 13px 29px; */
-  /* width: 200px;
-  height: 36px; */
   margin: 20px 0px;
   color: #4abb77;
 }
@@ -86,7 +85,7 @@
   color: #333333;
   margin-bottom: 110px;
 }
-.banner > img {
+.banner > a > img {
   width: 140px;
   height: 140px;
   margin-bottom: 36px;
@@ -120,6 +119,11 @@
   line-height: 40px;
   width: 310px;
   height: 80px;
+  cursor: pointer;
+}
+.btn > a {
+  text-decoration: none;
+  color: #333333 !important;
 }
 
 @media (max-width: 1200px) {

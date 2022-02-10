@@ -161,14 +161,15 @@
   color: #71ba44;
   font-weight: bold;
 }
-.header-routes ul li:hover .route-sub-item {
+.route-sub-item {
   color: #1b3765;
   text-decoration: none;
   border-left: 3px solid #71ba44;
   border-radius: 5px;
   box-shadow: 0 4px 24px rgb(0 0 0 / 5%);
   padding: 10px;
-  width: 100%;
+  /* width: 100%; */
+  width: 100px;
   padding-right: 20px;
 }
 .route-sub-item:hover{

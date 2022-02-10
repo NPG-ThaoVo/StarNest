@@ -6,7 +6,7 @@ export default function Footer() {
     <>
       <div className={styles["wrap-container"]}>
         <div className={styles["container"]} id="footer">
-          <div className={styles["title"]}>Calendar</div>
+          <div className={styles["title"]}><a href="/calendar">Calendar</a></div>
           <div className={styles["wrap"]}>
             <div className={styles["contact"]}>
               <div>Contact us</div>
