@@ -1,16 +1,7 @@
+
 @font-face {
   font-family: Agrandir;
-  src: local("Agrandir") url(../../fonts/Agrandir-TextBold.otf) format("truetype");
-  font-weight: bold;
-}
-@font-face {
-  font-family: Agrandir;
-  src: local("Agrandir") url(../../fonts/Agrandir-ThinItalic.otf) format("truetype");
-  font-style: italic;
-}
-@font-face {
-  font-family: Agrandir;
-  src: local("Agrandir") url(../../fonts/Agrandir-Regular.otf) format("truetype");
+  src: url(../../fonts/Agrandir-Narrow.otf) format("truetype");
   font-weight: normal;
 }
 

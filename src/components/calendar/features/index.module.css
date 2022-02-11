@@ -18,13 +18,16 @@
 }
 .wrap {
   width: 100%;
-  background: #ffffff40;
+  background: #ffffff16;
   border-radius: 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
   overflow: hidden;
   padding: 28px 73px;
+}
+.wrap:hover {
+  background: #ffffff40;
 }
 .order {
   position: relative;
@@ -47,7 +50,6 @@
   font-size: 48px;
   line-height: 40px;
   color: #fff;
-  margin-bottom: 15.73px;
 }
 .order > div:last-child {
   position: absolute;
@@ -63,6 +65,7 @@
   line-height: 44px;
   text-align: center;
   color: #333333;
+  margin-top: 15.73px;
 }
 
 @media (max-width: 1360px) {
