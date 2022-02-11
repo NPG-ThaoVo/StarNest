@@ -1,0 +1,48 @@
+@font-face {
+  font-family: Agrandir;
+  src: local("Agrandir") url(../../fonts/Agrandir-TextBold.otf) format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: Agrandir;
+  src: local("Agrandir") url(../../fonts/Agrandir-ThinItalic.otf) format("truetype");
+  font-style: italic;
+}
+@font-face {
+  font-family: Agrandir;
+  src: local("Agrandir") url(../../fonts/Agrandir-Regular.otf) format("truetype");
+  font-weight: normal;
+}
+
+.container {
+  padding: 0px 60px;
+  max-width: 1440px;
+  font-family: Agrandir;
+  position: relative;
+}
+.pink-blur {
+  position: absolute;
+  width: 424px;
+  height: 424px;
+
+  background: linear-gradient(
+    134.27deg,
+    rgba(237, 115, 115, 0.16) 5.56%,
+    rgba(242, 22, 75, 0.16) 49.74%,
+    rgba(210, 47, 126, 0.16) 93.01%
+  );
+  filter: blur(126px);
+  border-radius: 332px;
+  transform: rotate(-180deg);
+}
+
+@media (max-width: 1199px) {
+  .container {
+    padding: 0px 24px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 0px 14px;
+  }
+}
