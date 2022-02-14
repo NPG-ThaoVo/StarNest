@@ -2,6 +2,7 @@
   display: flex;
   width: 100%;
   justify-content: flex-start;
+  margin: 59px 0px;
 }
 
 .reverse {
@@ -13,7 +14,7 @@
 
 .wrap {
   display: flex;
-  width: 90%;
+  width: 92%;
   position: relative;
   justify-content: space-between;
   overflow: visible;
@@ -22,10 +23,13 @@
 .content {
   width: 62%;
   font-size: 72px;
-  line-height: 82px;
+  line-height: 100px;
   color: #333333;
   display: flex;
   align-items: center;
+}
+.content > div {
+  position: relative;
 }
 .content > div > div:first-child {
   font-style: normal;
@@ -51,10 +55,12 @@
 }
 .img > img:first-child {
   width: 100%;
+  object-fit: cover;
 }
 .img > img:last-child {
   width: 100%;
   z-index: 12;
+  object-fit: cover;
   position: absolute;
   height: 100%;
   left: 0px;
@@ -96,9 +102,9 @@
 .wave {
   height: 3.6vw;
   position: absolute;
-  left: 50%;
+  left: 90%;
   transform: translateX(-50%);
-  top: 8vw;
+  top: -100px;
 }
 .round {
   height: 219px;
@@ -125,6 +131,9 @@
   .round {
     display: none;
   }
+  .wave {
+    top: -80px;
+  }
 }
 @media (max-width: 900px) {
   .container {
@@ -144,11 +153,14 @@
 @media (max-width: 800px) {
   .content {
     font-size: 36px;
-    line-height: 46px;
+    line-height: 48px;
   }
   .content > div > div:last-child {
     font-size: 24px;
     line-height: 28px;
+  }
+  .wave {
+    top: -60px;
   }
 }
 @media (max-width: 500px) {
@@ -164,7 +176,7 @@
 @media (max-width: 400px) {
   .content {
     font-size: 24px;
-    line-height: 34px;
+    line-height: 33px;
   }
   .content > div > div:last-child {
     font-size: 13px;
@@ -178,5 +190,8 @@
   }
   .img-blur {
     transform: rotate(3.1deg) scale(1.04);
+  }
+  .wave {
+    top: -30px;
   }
 }

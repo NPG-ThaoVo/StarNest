@@ -25,6 +25,7 @@ export default function Component({
         <div className={styles["wrap"]}>
           <div className={styles["content"]}>
             <div>
+          {wave && <Wave />}
               <div>
                 {content.title}
                 <div>{content.subTitle}</div>
@@ -38,7 +39,6 @@ export default function Component({
             <img src={src} alt=""></img>
           </div>
           {blur && <BlueBlur x={blur.x} y={blur.y} />}
-          {wave && <Wave />}
           {round && <Round x={round.x} y={round.y} />}
         </div>
       </div>

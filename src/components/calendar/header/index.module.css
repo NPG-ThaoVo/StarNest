@@ -120,6 +120,7 @@
   width: 310px;
   height: 80px;
   cursor: pointer;
+  padding-top: 4px;
 }
 .btn > a {
   text-decoration: none;
