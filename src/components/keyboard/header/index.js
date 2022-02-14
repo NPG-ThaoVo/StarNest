@@ -46,14 +46,8 @@ function Header() {
           </div>
           <div className={styles['image-container']}>
             <img
-              src="./imgs/ellipse-2.png"
-              alt="ellipse"
-              className={styles['ellipse-2']}
-            />
-            <img
-              src="./imgs/header-image-app.png"
-              alt=""
-              className={styles['ellipse-2-app']}
+              src="./imgs/kebo-banner.png"
+              alt="banner"
             />
           </div>
         </div>

@@ -18,8 +18,7 @@ span {
 
 .container {
   margin-top: 209px;
-  padding-left: 69px;
-  padding-right: 179px;
+  padding: 0px 94px 0px 116px;
 }
 
 .ribbon-container {
@@ -42,21 +41,19 @@ span {
   position: relative;
 
   padding-top: 126px;
-
   display: flex;
   align-items: center;
-  gap: 78px;
 }
 
 .header-title {
-  padding-left: 47px;
-
   font-size: 64px;
   line-height: 80px;
 
-  min-width: 587px;
+  padding-right: 70px;
   word-wrap: break-word;
   white-space: pre-line;
+
+  width: 50%;
 }
 
 .header-description {
@@ -93,25 +90,45 @@ span {
 .image-container {
   display: flex;
   align-items: center;
+  width: 50%;
 }
 
-.ellipse-2-app {
-  display: none;
+.image-container > img {
+  width: 100%;
+  object-fit: cover;
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1360px) {
+  .header-description {
+    font-size: 56px;
+    line-height: 70px;
+  }
   .header-title {
-    min-width: auto;
+    padding-right: 50px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .header-description {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  .header-title {
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .header-description {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .header-title {
+    padding-right: 30px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .container {
-    padding-left: 32px;
-  }
-
-  .header-wrap {
-    gap: 78px;
+    padding: 0px 70px;
   }
 
   .ribbon-container {
@@ -131,53 +148,21 @@ span {
     width: 80%;
     height: 80%;
   }
-
-  .header-title {
-    padding-right: 0px;
-  }
-
-  .ellipse-2 {
-    display: block;
-    padding-right: 50px;
-    width: var(--imageWidth1024);
-  }
-
-  .header-title {
-    font-size: 48px;
-    line-height: 72px;
-  }
 }
 
 @media screen and (max-width: 850px) {
-  .container {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
   .header-wrap {
     flex-direction: column;
-    justify-content: center;
-    gap: 0;
-  }
-
-  .header-title {
-    text-align: center;
-    margin-bottom: 0px;
-
-    font-size: 36px;
-    line-height: 54px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .image-container {
-    display: flex;
-    justify-content: center;
     align-items: center;
   }
 
-  .ellipse-2 {
-    padding-right: 0;
+  .header-title {
+    width: 100%;
+    padding-right: 0px;
+  }
+  .image-container {
+    width: 100%;
+    margin-top: 30px;
   }
 }
 
@@ -202,15 +187,14 @@ span {
   .header-wrap {
     justify-content: flex-start;
     padding-top: 82px;
-    gap: 32px;
   }
 
-  .header-title {
-    width: 100%;
+  /* .header-title { */
+  /* width: 100%;
     font-size: 32px;
-    line-height: 38px;
-    text-align: left;
-  }
+    line-height: 38px; */
+  /* text-align: left; */
+  /* } */
 
   .header-description {
     font-size: 36px;
@@ -229,16 +213,6 @@ span {
   .image-container {
     width: 100%;
     justify-content: flex-start;
-  }
-
-  .ellipse-2 {
-    display: none;
-  }
-
-  .ellipse-2-app {
-    display: block;
-    width: 100%;
-    height: 460px;
   }
 
   .image-header {
