@@ -3,6 +3,7 @@
   background: #333333;
   display: flex;
   justify-content: center;
+  font-family: Agrandir;
 }
 .container {
   width: 100%;
@@ -120,7 +121,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 4px;
+  padding-top: 1px;
 }
 .btn-mobile {
   display: none;
