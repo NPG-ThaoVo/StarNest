@@ -45,10 +45,13 @@
   padding: 11px 18px;
   outline: none;
   color: #fff;
+  font-size: 20px;
 }
-.contact > input::placeholder {
+.contact > input::placeholder,
+.contact > textarea::placeholder {
   color: #fff;
   opacity: 0.4;
+  font-size: 20px;
 }
 .contact > textarea {
   background: #ffffff20;
@@ -60,10 +63,7 @@
   padding: 11px 18px;
   outline: none;
   color: #fff;
-}
-.contact > textarea::placeholder {
-  color: #fff;
-  opacity: 0.4;
+  font-size: 20px;
 }
 
 .footer {
@@ -89,7 +89,8 @@
 }
 .paths > div > div {
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 22px;
+  line-height: 1;
 }
 .paths > div > a {
   margin-bottom: 12px;
@@ -110,7 +111,7 @@
 .btn > div {
   background: #4abb77;
   border-radius: 12px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 24px;
   line-height: 1px;
   color: #333333;
