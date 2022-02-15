@@ -150,11 +150,51 @@
   padding-top: 4px;
 }
 
+
 .btn>a {
   text-decoration: none;
   color: #333333 !important;
 }
 
+.cov-button {
+  position: relative;
+}
+.btn-blur {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4abb77;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  width: 310px;
+  height: 80px;
+  cursor: pointer;
+  padding-top: 4px;
+}
+
+
+.btn-blur > a {
+  text-decoration: none;
+  color: #333333 !important;
+}
+
+.blur-dot-sm {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: #4aba78;
+  filter: blur(100px);
+}
+.blur-dot-lg {
+  position: absolute;
+  height: 174px;
+  width: 174px;
+  background-color: #4aba78;
+  filter: blur(123px);
+}
 @media (max-width: 1200px) {
   .title {
     font-size: 100px;

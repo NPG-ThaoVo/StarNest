@@ -37,7 +37,7 @@ export default function Header({ setIsOnView }) {
         <div className={styles["paths"]}>
           <a href="/calendar">Home</a>
           <a href="/calendar/#footer">Contact us</a>
-          <div onClick={onClick}>
+          <div className={styles["cov-button"]} onClick={onClick}>
             <a
               href="https://apps.apple.com/us/app/id1585939051"
               target="_blank"
@@ -45,8 +45,11 @@ export default function Header({ setIsOnView }) {
             >
               Free Download
             </a>
+            <span className={styles["blur-dot-sm"]}></span>
           </div>
+         
         </div>
+       
         <div className={styles["paths-mobile"]}>
           <img
             src="/imgs/menu.svg"
@@ -80,7 +83,7 @@ export default function Header({ setIsOnView }) {
           Improve your performance, get your work done with the best app on
           iPhone and iPad.
         </div>
-        <div className={styles["btn"]} onClick={onClick} ref={btn}>
+        <div className={styles["btn-blur"]} onClick={onClick} ref={btn}>
           <a
             href="https://apps.apple.com/us/app/id1585939051"
             target="_blank"
@@ -88,6 +91,7 @@ export default function Header({ setIsOnView }) {
           >
             Free Download
           </a>
+          <span className={styles["blur-dot-lg"]}></span>
         </div>
       </div>
     </>
