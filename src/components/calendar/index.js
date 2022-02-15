@@ -4,6 +4,9 @@ import Feedbacks from "./feedback";
 import Footer from "./footer";
 import Header from "./header";
 import styles from "./index.module.css";
+import AStyles from "../keyboard/footer/animate.module.css";
+import Confettiful from "../../util/firework";
+import { useEffect, useRef } from "react";
 
 const data = [
   {
@@ -64,9 +67,25 @@ const data = [
 ];
 
 export default function Calendar() {
+  const refs = useRef();
+
+  const showFirework = () => {
+    refs.current.style.display = "block";
+  };
+
+  const hideFirework = () => {
+    refs.current.style.display = "none";
+  };
+
+  useEffect(() => {
+    new Confettiful(refs.current, AStyles);
+    refs.current.style.display = "none";
+  }, []);
+
   return (
     <>
       <div className={styles["container"]}>
+        <div id="animate" className={AStyles["container"]} ref={refs}></div>
         <Header />
         {data.slice(0, 3).map((data, i) => (
           <Component
@@ -88,10 +107,16 @@ export default function Calendar() {
           src={data[3].src}
         />
         <Feedbacks />
-        <div className={styles["pink-blur"]} style={{ top: "120px", left: "-15%" }}></div>
-        <div className={styles["pink-blur"]} style={{ bottom: "-150px", left: "-15%" }}></div>
+        <div
+          className={styles["pink-blur"]}
+          style={{ top: "120px", left: "-15%" }}
+        ></div>
+        <div
+          className={styles["pink-blur"]}
+          style={{ bottom: "-150px", left: "-15%" }}
+        ></div>
       </div>
-      <Footer />
+      <Footer showFirework={showFirework} hideFirework={hideFirework} />
     </>
   );
 }

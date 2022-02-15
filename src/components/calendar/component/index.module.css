@@ -97,6 +97,7 @@
   filter: blur(131px);
   border-radius: 332px;
   transform: rotate(-180deg);
+  pointer-events: none;
 }
 
 .wave {
