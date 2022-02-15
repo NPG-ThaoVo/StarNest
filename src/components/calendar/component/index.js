@@ -7,6 +7,7 @@ export default function Component({
   blur,
   wave,
   round,
+  key
 }) {
   function BlueBlur({ x, y }) {
     return (
