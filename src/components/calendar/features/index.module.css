@@ -18,16 +18,16 @@
 }
 .wrap {
   width: 100%;
-  background: #ffffff16;
+  background: #ffffff4d;
   border-radius: 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
   overflow: hidden;
-  padding: 28px 73px;
+  padding: 28px 40px;
 }
 .wrap:hover {
-  background: #ffffff40;
+  background: #ffffff80;
 }
 .order {
   position: relative;
@@ -42,13 +42,12 @@
   height: 100px;
   z-index: 12;
   border-radius: 100px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   font-size: 48px;
-  line-height: 40px;
+  line-height: 50px;
   color: #fff;
 }
 .order > div:last-child {
@@ -58,7 +57,7 @@
   width: 100px;
   height: 100px;
   border-radius: 100px;
-  filter: blur(72px);
+  filter: blur(100px);
 }
 .content {
   font-size: 32px;
@@ -85,7 +84,7 @@
     font-size: 24px;
     line-height: 32px;
   }
-  .order {
+  /* .order {
     width: 80px;
     height: 80px;
   }
@@ -94,7 +93,7 @@
     line-height: 32px;
     width: 80px;
     height: 80px;
-  }
+  } */
 }
 @media (max-width: 700px) {
   .title {

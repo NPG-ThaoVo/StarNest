@@ -7,7 +7,8 @@
   align-items: center;
   position: relative;
 }
-.calendar > a {
+
+.calendar>a {
   font-weight: bold;
   font-size: 32px;
   line-height: 42px;
@@ -15,6 +16,7 @@
   text-decoration: none;
   color: #333333;
 }
+
 .paths {
   display: flex;
   justify-content: center;
@@ -22,15 +24,22 @@
   font-size: 20px;
   line-height: 30px;
 }
-.paths > a {
+
+.paths>a {
   margin-right: 80px;
   text-decoration: none;
   color: #333333 !important;
 }
-.paths > a:first-child {
+
+.paths>a:hover {
   font-weight: bold;
 }
-.paths > div {
+
+.paths>a:first-child {
+  font-weight: bold;
+}
+
+.paths>div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,16 +51,24 @@
   height: 56px;
   cursor: pointer;
 }
-.paths > div > a {
+
+.paths>div>a {
   text-decoration: none;
   color: #333333 !important;
 }
+
+.paths>div>a:hover,
+.btn:hover a {
+  font-weight: bold;
+}
+
 .paths-mobile {
   height: 56px;
   display: none;
   justify-content: flex-end;
   align-items: center;
 }
+
 .menu-mobile {
   width: 100%;
   position: absolute;
@@ -64,19 +81,23 @@
   line-height: 30px;
   color: #333333;
 }
-.menu-mobile > a {
+
+.menu-mobile>a {
   text-decoration: none;
   color: #333333;
   margin-top: 20px;
 }
-.menu-mobile > a:first-child {
+
+.menu-mobile>a:first-child {
   font-weight: bold;
 }
-.menu-mobile > div > a {
+
+.menu-mobile>div>a {
   font-weight: 600;
   margin: 20px 0px;
   color: #4abb77;
 }
+
 .banner {
   width: 100%;
   display: flex;
@@ -85,29 +106,35 @@
   color: #333333;
   margin-bottom: 110px;
 }
-.banner > a > img {
+
+.banner>a>img {
   width: 140px;
   height: 140px;
   margin-bottom: 36px;
 }
+
 .title {
   display: flex;
   font-size: 140px;
   line-height: 140px;
 }
-.title > div:first-child {
+
+.title>div:first-child {
   font-weight: bold;
   margin-right: 20px;
 }
-.title > div:last-child {
+
+.title>div:last-child {
   font-style: italic;
 }
+
 .subtitle {
   font-size: 40px;
   line-height: 50px;
   margin-bottom: 56px;
   text-align: center;
 }
+
 .btn {
   display: flex;
   justify-content: center;
@@ -122,7 +149,8 @@
   cursor: pointer;
   padding-top: 4px;
 }
-.btn > a {
+
+.btn>a {
   text-decoration: none;
   color: #333333 !important;
 }
@@ -139,30 +167,54 @@
     font-size: 60px;
     line-height: 60px;
   }
+
   .subtitle {
     font-size: 30px;
     line-height: 40px;
   }
+
   .paths-mobile {
     display: flex;
   }
+
   .paths {
     display: none;
   }
 }
+
 @media (max-width: 600px) {
   .title {
     font-size: 40px;
     line-height: 40px;
   }
+
   .subtitle {
     font-size: 20px;
     line-height: 24px;
   }
+
   .btn {
     font-size: 32px;
     line-height: 40px;
     width: 280px;
     height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding-bottom: 50px;
+  }
+  .banner img{
+    max-width: 250px;
+    margin-bottom: 30px;  
+  }
+  .title div{
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .subtitle{
+    margin-bottom: 30px;
+    font-size: 16px;
   }
 }

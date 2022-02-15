@@ -48,13 +48,7 @@ export default function Header() {
         )}
       </div>
       <div className={styles["banner"]}>
-        <a
-          href="https://apps.apple.com/us/app/id1585939051"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src="imgs\logo-calender.png" alt="" />
-        </a>
+      <img src="imgs\logo-calender.png" alt="" />
         <div className={styles["title"]}>
           <div>Calendar</div>
           <div>CUTE</div>
