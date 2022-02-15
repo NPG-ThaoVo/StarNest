@@ -1,10 +1,33 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./index.module.css";
-export default function Header() {
+export default function Header({ setIsOnView }) {
   const [open, setOpen] = useState(false);
+  const btn = useRef();
   function onClick(e) {
     e.target?.children[0]?.click();
   }
+  function isElementInViewport() {
+    if (!btn.current) return false;
+
+    var rect = btn.current.getBoundingClientRect();
+
+    return (
+      rect.top >= -80 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight)
+    );
+  }
+  useEffect(() => {
+    const isOnView = () => {
+      const isOn = isElementInViewport();
+      setIsOnView(isOn)
+    };
+    isOnView();
+    window.addEventListener("scroll", isOnView, false);
+
+    return () => window.removeEventListener("scroll", isOnView, false);
+  }, []);
+
   return (
     <>
       <div className={styles["navbar"]}>
@@ -48,7 +71,7 @@ export default function Header() {
         )}
       </div>
       <div className={styles["banner"]}>
-      <img src="imgs\logo-calender.png" alt="" />
+        <img src="imgs\logo-calender.png" alt="" />
         <div className={styles["title"]}>
           <div>Calendar</div>
           <div>CUTE</div>
@@ -57,7 +80,7 @@ export default function Header() {
           Improve your performance, get your work done with the best app on
           iPhone and iPad.
         </div>
-        <div className={styles["btn"]} onClick={onClick}>
+        <div className={styles["btn"]} onClick={onClick} ref={btn}>
           <a
             href="https://apps.apple.com/us/app/id1585939051"
             target="_blank"
