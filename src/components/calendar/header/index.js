@@ -71,7 +71,7 @@ export default function Header({ setIsOnView }) {
         )}
       </div>
       <div className={styles["banner"]}>
-        <img src="imgs\logo-calender.png" alt="" />
+        <img src="/imgs/logo-calender.png" alt="" />
         <div className={styles["title"]}>
           <div>Calendar</div>
           <div>CUTE</div>
