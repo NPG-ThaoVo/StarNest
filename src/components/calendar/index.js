@@ -5,6 +5,9 @@ import Feedbacks from "./feedback";
 import Footer from "./footer";
 import Header from "./header";
 import styles from "./index.module.css";
+import AStyles from "../keyboard/footer/animate.module.css";
+import Confettiful from "../../util/firework";
+import { useEffect, useRef } from "react";
 
 const data = [
   {
@@ -66,6 +69,7 @@ const data = [
 
 export default function Calendar() {
   const [isOnView, setIsOnView] = useState(true);
+  const refs = useRef();
 
   function setShow(onView) {
     if (onView) return false;
@@ -73,10 +77,24 @@ export default function Calendar() {
   }
   const showButton = setShow(isOnView);
 
+  const showFirework = () => {
+    refs.current.style.display = "block";
+  };
+
+  const hideFirework = () => {
+    refs.current.style.display = "none";
+  };
+
+  useEffect(() => {
+    new Confettiful(refs.current, AStyles);
+    refs.current.style.display = "none";
+  }, []);
+
   return (
     <>
       <DownloadButton showButton={showButton} />
       <div className={styles["container"]}>
+        <div id="animate" className={AStyles["container"]} ref={refs}></div>
         <Header setIsOnView={(is) => setIsOnView(is)} />
         {data.slice(0, 3).map((data, i) => (
           <Component
@@ -107,7 +125,7 @@ export default function Calendar() {
           style={{ bottom: "-150px", left: "-15%" }}
         ></div>
       </div>
-      <Footer />
+      <Footer showFirework={showFirework} hideFirework={hideFirework} />
     </>
   );
 }

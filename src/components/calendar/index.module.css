@@ -25,6 +25,7 @@
   filter: blur(126px);
   border-radius: 332px;
   transform: rotate(-180deg);
+  pointer-events: none;
 }
 
 .download {
