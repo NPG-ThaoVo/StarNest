@@ -136,7 +136,7 @@ export default function Footer(props) {
               <div>Copyright © 2021</div>
             </div>
           </div>
-          <img src="imgs/shape1-calendar.png" alt="shape" />
+          <img src="/imgs/shape1-calendar.png" alt="shape" />
         </div>
         {popup && <Popup closePopup={closePopup} />}
       </div>

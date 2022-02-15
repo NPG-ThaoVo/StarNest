@@ -114,14 +114,14 @@
   position: absolute;
 }
 
-@media (min-width: 1600px) {
+/* @media (min-width: 1600px) {
   .wave {
     display: none;
   }
   .round {
     display: none;
   }
-}
+} */
 
 @media (max-width: 1200px) {
   .container {

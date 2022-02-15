@@ -8,7 +8,7 @@
   position: relative;
 }
 
-.calendar>a {
+.calendar > a {
   font-weight: bold;
   font-size: 32px;
   line-height: 42px;
@@ -25,21 +25,21 @@
   line-height: 30px;
 }
 
-.paths>a {
+.paths > a {
   margin-right: 80px;
   text-decoration: none;
   color: #333333 !important;
 }
 
-.paths>a:hover {
+.paths > a:hover {
   font-weight: bold;
 }
 
-.paths>a:first-child {
+.paths > a:first-child {
   font-weight: bold;
 }
 
-.paths>div {
+.paths > div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,12 +52,12 @@
   cursor: pointer;
 }
 
-.paths>div>a {
+.paths > div > a {
   text-decoration: none;
   color: #333333 !important;
 }
 
-.paths>div>a:hover,
+.paths > div > a:hover,
 .btn:hover a {
   font-weight: bold;
 }
@@ -82,17 +82,17 @@
   color: #333333;
 }
 
-.menu-mobile>a {
+.menu-mobile > a {
   text-decoration: none;
   color: #333333;
   margin-top: 20px;
 }
 
-.menu-mobile>a:first-child {
+.menu-mobile > a:first-child {
   font-weight: bold;
 }
 
-.menu-mobile>div>a {
+.menu-mobile > div > a {
   font-weight: 600;
   margin: 20px 0px;
   color: #4abb77;
@@ -119,12 +119,12 @@
   line-height: 140px;
 }
 
-.title>div:first-child {
+.title > div:first-child {
   font-weight: bold;
   margin-right: 20px;
 }
 
-.title>div:last-child {
+.title > div:last-child {
   font-style: italic;
 }
 
@@ -133,6 +133,7 @@
   line-height: 50px;
   margin-bottom: 56px;
   text-align: center;
+  max-width: 900px;
 }
 
 .btn {
@@ -150,8 +151,7 @@
   padding-top: 4px;
 }
 
-
-.btn>a {
+.btn > a {
   text-decoration: none;
   color: #333333 !important;
 }
@@ -202,7 +202,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 940px) {
   .title {
     font-size: 60px;
     line-height: 60px;
@@ -211,6 +211,7 @@
   .subtitle {
     font-size: 30px;
     line-height: 40px;
+    max-width: 700px;
   }
 
   .paths-mobile {
@@ -228,9 +229,13 @@
     line-height: 40px;
   }
 
+  .title div:first-child {
+    margin-right: 6px;
+  }
   .subtitle {
     font-size: 20px;
     line-height: 24px;
+    max-width: 300px;
   }
 
   .btn {
@@ -245,16 +250,28 @@
   .navbar {
     padding-bottom: 50px;
   }
-  .banner img{
+  .banner img {
     max-width: 250px;
-    margin-bottom: 30px;  
+    margin-bottom: 30px;
   }
-  .title div{
-    margin-right: 0;
+  .title div:first-child {
+    margin-right: 10px;
     margin-bottom: 10px;
   }
-  .subtitle{
+  .subtitle {
     margin-bottom: 30px;
     font-size: 16px;
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 400px) {
+  .title div {
+    font-size: 32px;
+    line-height: 32px;;
+  }
+  .subtitle {
+    font-size: 12px;
+    max-width: 280px;
   }
 }

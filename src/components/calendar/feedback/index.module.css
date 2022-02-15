@@ -51,6 +51,16 @@
   position: relative;
   height: 100%;
 }
+
+.wrap:hover >div:last-child {
+  background: #4abb77;
+  color: #333333;
+}
+.wrap >div:last-child {
+  background: #333333;
+  color: #FFF;
+}
+
 .wrap:hover {
   background: #ffffff78;
 }
@@ -103,12 +113,12 @@
   border-radius: 100px;
   z-index: 312;
 }
-.quote-black {
+/* .quote-black {
   animation: turn-to-black 0.5s ease forwards;
 }
 .quote-green {
   animation: turn-to-green 0.5s ease forwards;
-}
+} */
 
 .next {
   padding-top: 40px;
@@ -155,7 +165,7 @@
   }
 }
 
-@keyframes turn-to-black {
+/* @keyframes turn-to-black {
   from {
     background: #4abb77;
     color: #333333;
@@ -175,7 +185,7 @@
     background: #4abb77;
     color: #333333;
   }
-}
+} */
 
 @keyframes move-back {
   from {
