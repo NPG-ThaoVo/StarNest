@@ -13,9 +13,7 @@
 .features {
   width: 100%;
   display: grid;
-  grid-template-columns: calc(33.33% - 40px / 3) calc(33.33% - 40px / 3) calc(
-      33.33% - 40px / 3
-    );
+  grid-template-columns: calc(33.33% - 40px / 3) calc(33.33% - 40px / 3) calc(33.33% - 40px / 3);
   row-gap: 24px;
   column-gap: 20px;
   position: relative;
@@ -47,6 +45,12 @@
   max-width: 427px;
   height: 100%;
 }
+.feature-move-left {
+  animation: move-left .4s ease forwards;
+}
+.feature-move-right {
+  animation: move-right .4s ease forwards;
+}
 .right-icon,
 .left-icon {
   position: absolute;
@@ -69,6 +73,7 @@
 }
 .wrap {
   width: 100%;
+  height: 100%;
   background: #ffffff4d;
   border-radius: 20px;
   display: flex;
@@ -186,3 +191,22 @@
       height: 80px;
     } */
 }
+
+@keyframes move-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes move-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
