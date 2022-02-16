@@ -1,16 +1,17 @@
-
 @font-face {
   font-family: Agrandir;
   src: url(../../fonts/Agrandir-Regular.otf) format("opentype");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: Agrandir;
   src: url(../../fonts/Agrandir-Bold.otf) format("opentype");
   font-weight: bold;
   font-style: normal;
 }
+
 @font-face {
   font-family: Agrandir-Tight;
   src: url(../../fonts/Agrandir-Tight.otf) format("opentype");
@@ -27,17 +28,16 @@
   font-family: Agrandir;
   position: relative;
 }
+
 .pink-blur {
   position: absolute;
   width: 424px;
   height: 424px;
 
-  background: linear-gradient(
-    134.27deg,
-    rgba(237, 115, 115, 0.16) 5.56%,
-    rgba(242, 22, 75, 0.16) 49.74%,
-    rgba(210, 47, 126, 0.16) 93.01%
-  );
+  background: linear-gradient(134.27deg,
+      rgba(237, 115, 115, 0.16) 5.56%,
+      rgba(242, 22, 75, 0.16) 49.74%,
+      rgba(210, 47, 126, 0.16) 93.01%);
   filter: blur(126px);
   border-radius: 332px;
   transform: rotate(-180deg);
@@ -45,10 +45,9 @@
 }
 
 .download {
-  position: fixed;
   bottom: 20px;
   right: 20px;
-  border-radius: 100px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,19 +55,52 @@
   width: 56px;
   height: 56px;
   text-decoration: none;
-  z-index: 1223;
-  /* border: 4px solid #4abb77; */
   transition: all 1s ease;
   opacity: 0;
   pointer-events: none;
+  margin-right: 10px;
+  padding: 0px;
+  z-index: 1;
 }
+
+.wrap-btn-download {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 5%;
+  right: 0;
+  z-index: 9999999999;
+  transition: all 1s ease;
+  text-decoration: none;
+}
+
 .show-download {
-  opacity: 1;
+  opacity: 1 !important;
   pointer-events: inherit;
 }
-.download >svg{
+
+.download>svg {
   width: 56px;
+  height: auto;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  margin: 4px;
+}
+
+.btn-download-text {
   height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 0 20px 0 0;
+  padding: 0 20px 0 35px;
+  position: relative;
+  left: -33px;
+  box-shadow: 0 13px 12px rgb(0 0 0 / 6%);
+  color: #4abb77;
+  font-weight: bold;
+  opacity: 0;
 }
 
 @media (max-width: 1199px) {
@@ -76,8 +108,9 @@
     padding: 0px 24px;
   }
 }
-/* @media (max-width: 600px) {
-  .container {
-    padding: 0px 14px;
+
+@media (max-width: 769px) {
+  .wrap-btn-download {
+    right: -5%;
   }
-} */
+}

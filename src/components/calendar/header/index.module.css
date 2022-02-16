@@ -8,7 +8,7 @@
   position: relative;
 }
 
-.calendar > a {
+.calendar>a {
   font-weight: bold;
   font-size: 32px;
   line-height: 42px;
@@ -25,21 +25,17 @@
   line-height: 30px;
 }
 
-.paths > a {
+.paths>a {
   margin-right: 80px;
   text-decoration: none;
   color: #333333 !important;
 }
 
-.paths > a:hover {
+.paths>a:first-child {
   font-weight: bold;
 }
 
-.paths > a:first-child {
-  font-weight: bold;
-}
-
-.paths > div {
+.paths>div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,14 +48,11 @@
   cursor: pointer;
 }
 
-.paths > div > a {
+.paths>div>a {
   text-decoration: none;
   color: #333333 !important;
-}
-
-.paths > div > a:hover,
-.btn:hover a {
-  font-weight: bold;
+  position: absolute;
+  z-index: 9;
 }
 
 .paths-mobile {
@@ -82,17 +75,17 @@
   color: #333333;
 }
 
-.menu-mobile > a {
+.menu-mobile>a {
   text-decoration: none;
   color: #333333;
   margin-top: 20px;
 }
 
-.menu-mobile > a:first-child {
+.menu-mobile>a:first-child {
   font-weight: bold;
 }
 
-.menu-mobile > div > a {
+.menu-mobile>div>a {
   font-weight: 600;
   margin: 20px 0px;
   color: #4abb77;
@@ -119,12 +112,12 @@
   line-height: 140px;
 }
 
-.title > div:first-child {
+.title>div:first-child {
   font-weight: bold;
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
-.title > div:last-child {
+.title>div:last-child {
   font-style: italic;
   font-family: Agrandir-Tight;
 }
@@ -152,7 +145,7 @@
   padding-top: 4px;
 }
 
-.btn > a {
+.btn>a {
   text-decoration: none;
   color: #333333 !important;
 }
@@ -161,6 +154,7 @@
   position: relative;
   font-family: Agrandir-Medium;
 }
+
 .btn-blur {
   position: relative;
   display: flex;
@@ -179,9 +173,11 @@
 }
 
 
-.btn-blur > a {
+.btn-blur>a {
   text-decoration: none;
   color: #333333 !important;
+  position: absolute;
+  z-index: 9;
 }
 
 .blur-dot-sm {
@@ -191,6 +187,7 @@
   background-color: #4aba78;
   filter: blur(100px);
 }
+
 .blur-dot-lg {
   position: absolute;
   height: 174px;
@@ -198,6 +195,13 @@
   background-color: #4aba78;
   filter: blur(160px);
 }
+
+@media not all and (min-resolution:.001dpcm) {
+    .blur-dot-lg {
+      background: none;
+    }
+  }
+
 @media (max-width: 1200px) {
   .title {
     font-size: 100px;
@@ -235,6 +239,7 @@
   .title div:first-child {
     margin-right: 6px;
   }
+
   .subtitle {
     font-size: 20px;
     line-height: 24px;
@@ -253,14 +258,17 @@
   .navbar {
     padding-bottom: 50px;
   }
+
   .banner img {
     max-width: 250px;
     margin-bottom: 30px;
   }
+
   .title div:first-child {
     margin-right: 10px;
     margin-bottom: 10px;
   }
+
   .subtitle {
     margin-bottom: 30px;
     font-size: 16px;
@@ -271,8 +279,10 @@
 @media (max-width: 400px) {
   .title div {
     font-size: 32px;
-    line-height: 32px;;
+    line-height: 32px;
+    ;
   }
+
   .subtitle {
     font-size: 12px;
     max-width: 280px;
