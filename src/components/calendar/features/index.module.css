@@ -154,7 +154,7 @@
   }
   .features,
   .right-features {
-    grid-template-columns: auto auto;
+    grid-template-columns: calc(50% - 20px / 2) calc(50% - 20px / 2);
   }
 }
 
