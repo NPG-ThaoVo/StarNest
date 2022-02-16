@@ -5,17 +5,20 @@
   font-weight: normal;
   font-style: normal;
 }
-/* @font-face {
-  font-family: Agrandir;
-  src: url(../../fonts/Agrandir-TextBold.otf) format("opentype");
-  font-weight: bold;
-  font-style: normal;
-} */
 @font-face {
   font-family: Agrandir;
+  src: url(../../fonts/Agrandir-Bold.otf) format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: Agrandir-Tight;
   src: url(../../fonts/Agrandir-Tight.otf) format("opentype");
-  font-style: italic;
-  font-weight: normal;
+}
+
+@font-face {
+  font-family: Agrandir-Medium;
+  src: url(../../fonts/Agrandir-Medium.otf) format("opentype");
 }
 
 .container {

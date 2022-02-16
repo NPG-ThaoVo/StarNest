@@ -46,7 +46,7 @@
   background: #4abb77;
   border-radius: 12px;
   font-weight: 500;
-  padding: 13px 29px;
+  padding: 13px 28px;
   width: 200px;
   height: 56px;
   cursor: pointer;
@@ -126,6 +126,7 @@
 
 .title > div:last-child {
   font-style: italic;
+  font-family: Agrandir-Tight;
 }
 
 .subtitle {
@@ -158,6 +159,7 @@
 
 .cov-button {
   position: relative;
+  font-family: Agrandir-Medium;
 }
 .btn-blur {
   position: relative;
@@ -173,6 +175,7 @@
   height: 80px;
   cursor: pointer;
   padding-top: 4px;
+  font-family: Agrandir-Medium;
 }
 
 
@@ -193,7 +196,7 @@
   height: 174px;
   width: 174px;
   background-color: #4aba78;
-  filter: blur(123px);
+  filter: blur(160px);
 }
 @media (max-width: 1200px) {
   .title {
