@@ -35,6 +35,7 @@
   line-height: 30px;
   color: #ffffff;
   margin-top: 16px;
+  opacity: .9;
 }
 .contact > input {
   background: #ffffff20;
@@ -100,6 +101,8 @@
   margin-bottom: 12px;
   color: #ffffff;
   text-decoration: none;
+  font-weight: 400;
+  opacity: .9;
 }
 
 .foot {
@@ -124,8 +127,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 1px;
+  padding-top: 4px;
   cursor: pointer;
+  font-family: Agrandir-Medium;
 }
 .btn-mobile {
   display: none;
@@ -135,6 +139,7 @@
   font-size: 20px;
   line-height: 30px;
   color: #ffffff;
+  opacity: .9;
 }
 
 .container > img {

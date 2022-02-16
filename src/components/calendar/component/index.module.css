@@ -38,7 +38,8 @@
 
 .content > div > div:first-child > div {
   font-style: italic;
-  font-weight: normal;
+  font-weight: 400;
+  font-family: Agrandir-Tight;
 }
 
 .content > div > div:last-child {
