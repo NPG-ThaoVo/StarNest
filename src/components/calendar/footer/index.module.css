@@ -49,6 +49,7 @@
   color: #fff;
   font-size: 20px;
   border: none;
+  font-family: Agrandir;
 }
 .contact > input::placeholder,
 .contact > textarea::placeholder {
@@ -69,6 +70,7 @@
   color: #fff;
   font-size: 20px;
   border: none;
+  font-family: Agrandir;
 }
 
 .footer {
