@@ -1,27 +1,26 @@
 import styles from "./index.module.css";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export default function Features() {
-
   const [isRightFeature, setIsRightFeature] = useState(false);
   const [isOnMobile, setIsOnMobile] = useState(false);
 
   useEffect(() => {
-    if(window.innerWidth <= 700) setIsOnMobile(true);
-    window.addEventListener('resize', () => {
+    if (window.innerWidth <= 700) setIsOnMobile(true);
+    window.addEventListener("resize", () => {
       const screenWidth = window.innerWidth;
       if (screenWidth <= 700) setIsOnMobile(true);
       else setIsOnMobile(false);
     });
     return () => {
-      window.removeEventListener('resize', () => { });
-    }
+      window.removeEventListener("resize", () => {});
+    };
   }, []);
 
   const data = [
     {
       color: "#4ABB77",
-      content: "Color code events and <br> calendars",
+      content: "Color code events <br> and calendars",
     },
     {
       color: "#EB7E4F",
@@ -37,28 +36,28 @@ export default function Features() {
     },
     {
       color: "#F86F90",
-      content: "Secure with FaceID and <br> passcode",
+      content: "Secure with FaceID <br>and passcode",
     },
     {
       color: "#4DD1CD",
       content: "Background <br>effects",
     },
     {
-      color: '#4ABA78',
-      content: 'Longlife <br> journal'
+      color: "#4ABA78",
+      content: "Longlife <br> journal",
     },
     {
-      color: '#F86F90',
-      content: 'Memo'
+      color: "#F86F90",
+      content: "Memo",
     },
     {
-      color: '#FFC15D',
-      content: 'Create a new <br>habit'
+      color: "#FFC15D",
+      content: "Create a new <br>habit",
     },
     {
-      color: '#EB7E4F',
-      content: 'Sync <br> iCloud'
-    }
+      color: "#EB7E4F",
+      content: "Sync <br> iCloud",
+    },
   ];
 
   return (
@@ -66,7 +65,7 @@ export default function Features() {
       <div className={styles["container"]}>
         <div className={styles["title"]}>Features you’ll love</div>
         <div className={styles[isRightFeature ? "right-features" : "features"]}>
-          {isOnMobile ?
+          {isOnMobile ? (
             data.map((feature, i) => (
               <Feature
                 order={i + 1}
@@ -74,42 +73,46 @@ export default function Features() {
                 color={feature.color}
                 key={i}
               />
-            )) :
+            ))
+          ) : (
             <>
-              {!isRightFeature ?
-                data?.slice(0, 6).map((feature, i) => (
-                  <Feature
-                    order={i + 1}
-                    content={feature.content}
-                    color={feature.color}
-                    key={i}
-                  />
-                )) :
-                data?.slice(6).map((feature, i) => (
-                  <Feature
-                    order={i + 7}
-                    content={feature.content}
-                    color={feature.color}
-                    key={i}
-                  />
-                ))}
-              {!isRightFeature ?
-                <div className={styles["right-icon"]} onClick={() => setIsRightFeature(true)} >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="20"
-                    viewBox="0 0 22 20"
-                    fill="none"
-                  >
-                    <path
-                      d="M11 1L20 10L11 19M0 10H20H0Z"
-                      stroke="#333333"
-                      strokeWidth="2"
-                    />
-                  </svg>
-                </div> :
-                <div className={styles["left-icon"]} onClick={() => setIsRightFeature(false)} >
+              {!isRightFeature
+                ? data
+                    ?.slice(0, 6)
+                    .map((feature, i) => (
+                      <Feature
+                        order={i + 1}
+                        content={feature.content}
+                        color={feature.color}
+                        key={i}
+                      />
+                    ))
+                : data?.slice(6).map((feature, i) =>
+                    i % 2 ? (
+                      <div className={styles["right-features-right"]}>
+                        <Feature
+                          order={i + 7}
+                          content={feature.content}
+                          color={feature.color}
+                          key={i}
+                        />
+                      </div>
+                    ) : (
+                      <div className={styles["right-features-left"]}>
+                        <Feature
+                          order={i + 7}
+                          content={feature.content}
+                          color={feature.color}
+                          key={i}
+                        />
+                      </div>
+                    )
+                  )}
+              {!isRightFeature ? (
+                <div
+                  className={styles["right-icon"]}
+                  onClick={() => setIsRightFeature(true)}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="22"
@@ -124,9 +127,28 @@ export default function Features() {
                     />
                   </svg>
                 </div>
-              }
+              ) : (
+                <div
+                  className={styles["left-icon"]}
+                  onClick={() => setIsRightFeature(false)}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="20"
+                    viewBox="0 0 22 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M11 1L20 10L11 19M0 10H20H0Z"
+                      stroke="#333333"
+                      strokeWidth="2"
+                    />
+                  </svg>
+                </div>
+              )}
             </>
-          }
+          )}
         </div>
       </div>
     </>
@@ -138,10 +160,15 @@ function Feature({ order, content, color }) {
     <>
       <div className={styles["wrap"]}>
         <div className={styles["order"]}>
-          <div style={{ background: color }}>{(order === 10 ? "" : "0") + order}</div>
+          <div style={{ background: color }}>
+            {(order === 10 ? "" : "0") + order}
+          </div>
           <div style={{ background: color }}></div>
         </div>
-        <div className={styles["content"]} dangerouslySetInnerHTML={{ __html: content }}></div>
+        <div
+          className={styles["content"]}
+          dangerouslySetInnerHTML={{ __html: content }}
+        ></div>
       </div>
     </>
   );
