@@ -2,20 +2,6 @@ import styles from "./index.module.css";
 import { useState, useEffect } from "react";
 
 export default function Features() {
-  const [isRightFeature, setIsRightFeature] = useState(false);
-  const [isOnMobile, setIsOnMobile] = useState(false);
-
-  useEffect(() => {
-    if (window.innerWidth <= 700) setIsOnMobile(true);
-    window.addEventListener("resize", () => {
-      const screenWidth = window.innerWidth;
-      if (screenWidth <= 700) setIsOnMobile(true);
-      else setIsOnMobile(false);
-    });
-    return () => {
-      window.removeEventListener("resize", () => {});
-    };
-  }, []);
 
   const data = [
     {
@@ -28,7 +14,7 @@ export default function Features() {
     },
     {
       color: "#7977C8",
-      content: "Hide calendars <br> you don’t need",
+      content: "Hide calendars <br> you don't need",
     },
     {
       color: "#FFC15D",
@@ -60,58 +46,81 @@ export default function Features() {
     },
   ];
 
+  const [startFeature, setStartFeature] = useState(0);
+  const [isFirstTime, setIsFirstTime] = useState(true);
+  const [isNext, setIsNext] = useState(false);
+  const [isOnMobile, setIsOnMobile] = useState(false);
+  const [renderList, setRenderList] = useState([0, 2, 4, 1, 3, 5]);
+
+  useEffect(() => {
+    if (window.innerWidth <= 700) setIsOnMobile(true);
+    window.addEventListener("resize", () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth <= 700) setIsOnMobile(true);
+      else setIsOnMobile(false);
+    });
+    return () => {
+      window.removeEventListener("resize", () => { });
+    };
+  }, []);
+
+  const setlistRender = (index) => {
+    switch (index) {
+      case 0:
+        setRenderList([0, 2, 4, 1, 3, 5]);
+        break;
+      case 1:
+        setRenderList([2, 4, 6, 3, 5, 7]);
+        break;
+      case 2:
+        setRenderList([4, 6, 8, 5, 7, 9]);
+        break;
+    }
+  }
+
+
+  const handleNextButton = () => {
+    setlistRender(startFeature + 1);
+    setStartFeature(startFeature + 1);
+    setIsNext(true);
+    setIsFirstTime(false);
+  }
+
+  const handlePreviousButton = () => {
+    setlistRender(startFeature - 1);
+    setIsNext(false);
+    setStartFeature(startFeature - 1);
+  }
+
   return (
     <>
       <div className={styles["container"]}>
         <div className={styles["title"]}>Features you’ll love</div>
-        <div className={styles[isRightFeature ? "right-features" : "features"]}>
+        <div className={styles["features"]}>
           {isOnMobile ? (
             data.map((feature, i) => (
               <Feature
                 order={i + 1}
-                content={feature.content}
-                color={feature.color}
+                content={feature?.content}
+                color={feature?.color}
                 key={i}
               />
             ))
           ) : (
             <>
-              {!isRightFeature
-                ? data
-                    ?.slice(0, 6)
-                    .map((feature, i) => (
-                      <Feature
-                        order={i + 1}
-                        content={feature.content}
-                        color={feature.color}
-                        key={i}
-                      />
-                    ))
-                : data?.slice(6).map((feature, i) =>
-                    i % 2 ? (
-                      <div className={styles["right-features-right"]}>
-                        <Feature
-                          order={i + 7}
-                          content={feature.content}
-                          color={feature.color}
-                          key={i}
-                        />
-                      </div>
-                    ) : (
-                      <div className={styles["right-features-left"]}>
-                        <Feature
-                          order={i + 7}
-                          content={feature.content}
-                          color={feature.color}
-                          key={i}
-                        />
-                      </div>
-                    )
-                  )}
-              {!isRightFeature ? (
+              {renderList.map((feature, i) => (
+                <div className={!isFirstTime ? (isNext ? styles["feature-move-left"] : styles["feature-move-right"]) : ""} key={i + Math.random()} >
+                  <Feature
+                    order={feature + 1}
+                    content={data[feature]?.content}
+                    color={data[feature]?.color}
+                  />
+                </div>
+              ))}
+              {(startFeature !== 2) && (
                 <div
                   className={styles["right-icon"]}
-                  onClick={() => setIsRightFeature(true)}
+                  onClick={handleNextButton}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -127,10 +136,11 @@ export default function Features() {
                     />
                   </svg>
                 </div>
-              ) : (
+              )}
+              {(startFeature !== 0) && (
                 <div
                   className={styles["left-icon"]}
-                  onClick={() => setIsRightFeature(false)}
+                  onClick={handlePreviousButton}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
