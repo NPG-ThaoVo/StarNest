@@ -143,6 +143,9 @@
     font-size: 42px;
     line-height: 50px;
   }
+  .content{
+    height: 180px;
+  }
 }
 
 @media (max-width: 500px) {
