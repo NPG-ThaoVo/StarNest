@@ -47,6 +47,8 @@ p a {
   .container {
     padding: 40px 20px;
     width: 100%;
+  }
+  .container a {
     word-break: break-all;
   }
 }
