@@ -196,6 +196,26 @@
   filter: blur(160px);
 }
 
+.social-media {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  color: #333333;
+  font-size: 24px;
+  gap: 10px;
+}
+
+.social-img-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.social-media img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0;
+}
+
 @media not all and (min-resolution:.001dpcm) {
     .blur-dot-lg {
       background: none;
@@ -276,7 +296,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .title div {
     font-size: 32px;
     line-height: 32px;
@@ -286,5 +306,18 @@
   .subtitle {
     font-size: 12px;
     max-width: 280px;
+  }
+
+  .social-media {
+    flex-direction: column;
+  }
+
+  .social-img-wrapper {
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-img-wrapper img {
+    margin-bottom: 0;
   }
 }
