@@ -17,6 +17,25 @@ export default function Header({ setIsOnView }) {
         (window.innerHeight || document.documentElement.clientHeight)
     );
   }
+  function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+    return "unknown";
+}
   useEffect(() => {
     const isOnView = () => {
       const isOn = isElementInViewport();
@@ -27,6 +46,11 @@ export default function Header({ setIsOnView }) {
 
     return () => window.removeEventListener("scroll", isOnView, false);
   }, []);
+
+  useEffect(() => {
+    const os = getMobileOperatingSystem();
+    console.log("OS: ", os);
+  }, [])
 
   return (
     <>
@@ -92,6 +116,15 @@ export default function Header({ setIsOnView }) {
             Free Download
           </a>
           <span className={styles["blur-dot-lg"]}></span>
+        </div>
+        <div className={styles["social-media"]}>
+          Follow Me
+          <div className={styles['social-img-wrapper']}>
+            <img className={styles["social-img"]} src="/social/facebook.png" alt="facebook" />
+            <img className={styles["social-img"]} src="/social/pinterest.png" alt="pinterest" />
+            <img className={styles["social-img"]} src="/social/tik-tok.png" alt="tik-tok" />
+            <img className={styles["social-img"]} src="/social/youtube.png" alt="youtube" />
+          </div>
         </div>
       </div>
     </>
