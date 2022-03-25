@@ -120,10 +120,18 @@ export default function Header({ setIsOnView }) {
         <div className={styles["social-media"]}>
           Follow Me
           <div className={styles['social-img-wrapper']}>
-            <img className={styles["social-img"]} src="/social/facebook.png" alt="facebook" />
-            <img className={styles["social-img"]} src="/social/pinterest.png" alt="pinterest" />
-            <img className={styles["social-img"]} src="/social/tik-tok.png" alt="tik-tok" />
-            <img className={styles["social-img"]} src="/social/youtube.png" alt="youtube" />
+            <a href="https://www.facebook.com/cutecalendar2022/" target="_blank" rel="noreferrer">
+              <img className={styles["social-img"]} src="/social/facebook.png" alt="facebook" />
+            </a>
+            <a href="https://www.pinterest.jp/ngocttbstarnest/_created/" target="_blank" rel="noreferrer">
+              <img className={styles["social-img"]} src="/social/pinterest.png" alt="pinterest" />
+            </a>
+            <a href="https://www.tiktok.com/@plannerfor2022?_d=secCgYIASAHKAESPgo8tt0JxMcDtosnz5VeS1l1hmTj/A+GRDR7i6N+efq/Ot+T7t43Ne7CHCqeMD59L6HQFcld2wZ8RBDa8I6sGgA=&_r=1&checksum=d4860a4a5cf03e070ec9b8d76665b462a661afcbac93a3c3ee67cd5252d06ce9&language=vi&sec_uid=MS4wLjABAAAA4EDFo2WvDRhdnbXlMyCekj1yh0A1w-qZUhOoF2_dRXff1M-6BwjrkHvrlwyn4wy9&sec_user_id=MS4wLjABAAAA4EDFo2WvDRhdnbXlMyCekj1yh0A1w-qZUhOoF2_dRXff1M-6BwjrkHvrlwyn4wy9&share_app_id=1180&share_author_id=7078216668984083458&share_link_id=5F902CAA-810B-4EB6-8C07-07C2C5FE2AD8&source=h5_t&tt_from=messenger&u_code=e0mi019711glmm&user_id=7078216668984083458&utm_campaign=client_share&utm_medium=ios&utm_source=messenger" target="_blank" rel="noreferrer">
+              <img className={styles["social-img"]} src="/social/tik-tok.png" alt="tik-tok" />
+            </a>
+            <a href="https://www.youtube.com/channel/UCsOiwphARg7RLreLIqjVQhw" target="_blank" rel="noreferrer">
+              <img className={styles["social-img"]} src="/social/youtube.png" alt="youtube" />
+            </a>
           </div>
         </div>
       </div>
