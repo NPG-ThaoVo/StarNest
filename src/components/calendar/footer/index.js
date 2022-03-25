@@ -65,7 +65,6 @@ export default function Footer(props) {
         setPopup(true);
         props.showFirework();
       } catch (err) {
-        console.log("Error: ", err);
       }
     }
   };

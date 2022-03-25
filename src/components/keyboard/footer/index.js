@@ -63,7 +63,6 @@ function Footer(props) {
         setEmailError(true);
         setEmailError(true);
       } catch (err) {
-        console.log('Error: ', err);
       }
     }
   };

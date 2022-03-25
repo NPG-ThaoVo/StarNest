@@ -1,6 +1,5 @@
 const Confettiful = function (el, Astyles) {
   this.el = el;
-  console.log('dddd', el);
   this.containerEl = null;
 
   this.confettiFrequency = 3;
