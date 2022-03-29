@@ -49,7 +49,6 @@ export default function Header({ setIsOnView }) {
 
   useEffect(() => {
     const os = getMobileOperatingSystem();
-    console.log("OS: ", os);
   }, [])
 
   return (
