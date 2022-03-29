@@ -60,6 +60,7 @@ export default function Header({ setIsOnView }) {
         <div className={styles["paths"]}>
           <a href="/calendar">Home</a>
           <a href="/calendar/#footer">Contact us</a>
+          <a href="/calendar/privatepolicy">Private Policy</a>
           <div className={styles["cov-button"]} onClick={onClick}>
             <a
               href="https://apps.apple.com/us/app/id1585939051"
@@ -84,7 +85,8 @@ export default function Header({ setIsOnView }) {
           <div className={styles["menu-mobile"]}>
             <a href="/calendar">Home</a>
             <a href="/calendar/#footer">Contact us</a>
-            <div>
+            <a href="/calendar/privatepolicy">Private Policy</a>
+            <div className={styles["download-btn"]}>
               <a
                 href="https://apps.apple.com/us/app/id1585939051"
                 target="_blank"
