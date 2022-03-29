@@ -320,4 +320,8 @@
   .social-img-wrapper img {
     margin-bottom: 0;
   }
+
+  .download-btn {
+    margin-top: 20px;
+  }
 }
