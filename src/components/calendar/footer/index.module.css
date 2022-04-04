@@ -24,6 +24,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 .contact {
   width: 50%;
@@ -137,11 +138,14 @@
   display: none;
 }
 .copyright {
-  width: 40%;
+  width: 50%;
   font-size: 20px;
   line-height: 30px;
   color: #ffffff;
   opacity: .9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container > img {
@@ -150,6 +154,16 @@
   height: 116px;
   left: 269px;
   top: -70px;
+}
+
+.imageWrapper {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  max-width: 100%;
 }
 
 @media (max-width: 1199px) {
@@ -202,6 +216,9 @@
     height: 81.199px;
     left: 50px;
     top: -49px;
+  }
+  .imageWrapper {
+    display: none;
   }
 }
 @media (max-width: 600px) {
