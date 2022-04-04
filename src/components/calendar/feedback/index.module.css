@@ -129,6 +129,7 @@
   justify-content: flex-end;
 }
 .next > div {
+  cursor: pointer;
   border-radius: 100px;
   display: flex;
   justify-content: center;
@@ -171,6 +172,11 @@
   }
 }
 
+@media screen and (max-width: 850px) {
+  .content {
+    height: 140px;
+  }
+}
 /* @keyframes turn-to-black {
   from {
     background: #4abb77;

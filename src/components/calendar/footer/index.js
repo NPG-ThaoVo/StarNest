@@ -110,7 +110,7 @@ export default function Footer(props) {
                 <div>Send</div>
               </div>
             </div>
-            <div className={styles["footer"]}>
+            {/* <div className={styles["footer"]}>
               <div className={styles["paths"]}>
                 <div>
                   <div>Product</div>
@@ -125,6 +125,9 @@ export default function Footer(props) {
                   <a href="/calendar">Support</a>
                 </div>
               </div>
+            </div> */}
+            <div className={styles['imageWrapper']}>
+              <img className={styles['image']} src="/imgs/contact-01.svg" alt=""/>
             </div>
           </div>
           <div className={styles["foot"]}>
