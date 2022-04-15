@@ -50,9 +50,18 @@
   margin-top: 5px;
 }
 
+.lean-left {
+  transform: rotate(-3deg);
+}
+.lean-right {
+  transform: rotate(3deg);
+}
 .img {
   width: 28%;
   position: relative;
+}
+.img > img {
+  border-radius: 40px;
 }
 .img > img:first-child {
   width: 100%;
@@ -188,6 +197,9 @@
   }
   .img {
     width: 40%;
+  }
+  .img > img {
+    border-radius: 20px;
   }
   .content {
     width: 56%;

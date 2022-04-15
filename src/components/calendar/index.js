@@ -11,6 +11,7 @@ import { useEffect, useRef } from "react";
 
 const data = [
   {
+    id: 1,
     content: {
       title: "A nice application",
       subTitle: "Intensive and easy to use",
@@ -23,8 +24,10 @@ const data = [
     wave: true,
     display: 1,
     src: "/imgs/phone1-calendar.png",
+    // src: "/imgs/mobile-nice-app.png",
   },
   {
+    id: 2,
     content: {
       title: "Connect all",
       subTitle: "of your calendars",
@@ -32,9 +35,11 @@ const data = [
         "Keep everything in one place. Just in a few taps to your iCal, Google Calendar and Exchange",
     },
     display: 2,
-    src: "/imgs/phone2-calendar.png",
+    // src: "/imgs/phone2-calendar.png",
+    src: "/imgs/mobile-connect.png",
   },
   {
+    id: 3,
     content: {
       title: "Complete more",
       subTitle: "assignments and tasks",
@@ -46,9 +51,11 @@ const data = [
       x: "-240px",
       y: "70%",
     },
-    src: "/imgs/phone3-calendar.png",
+    // src: "/imgs/phone3-calendar.png",
+    src: "/imgs/mobile-complete-more.png"
   },
   {
+    id: 4,
     content: {
       title: "Advance reminder",
       subTitle: "for important events",
@@ -63,7 +70,8 @@ const data = [
       y: "94%",
     },
     display: 2,
-    src: "/imgs/phone4-calendar.png",
+    // src: "/imgs/phone4-calendar.png",
+    src: "/imgs/mobile-advance.png"
   },
 ];
 
@@ -104,6 +112,7 @@ export default function Calendar() {
             display={data.display}
             src={data.src}
             key={i}
+            id={data.id}
           />
         ))}
 
@@ -114,6 +123,7 @@ export default function Calendar() {
           content={data[3].content}
           display={data[3].display}
           src={data[3].src}
+          id={data[3].id}
         />
         <Feedbacks />
         <div
@@ -131,9 +141,43 @@ export default function Calendar() {
 }
 
 function DownloadButton({ showButton }) {
+  const [os, setOs] = useState("");
+
+  function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+    return "unknown";
+  }
+
+  useEffect(() => {
+    const currentOs = getMobileOperatingSystem();
+    console.log("Current OS: ", currentOs);
+    if (currentOs == "Android") {
+      setOs("https://play.google.com/store/apps/details?id=com.calendar.cute");
+    } 
+    if (currentOs == "iOS") {
+      setOs("https://apps.apple.com/us/app/id1585939051")
+    }
+  }, [os])
+
   return (
     <a className={styles["wrap-btn-download"]}
-      href="https://apps.apple.com/us/app/id1585939051"
+      // href="https://apps.apple.com/us/app/id1585939051"
+      href={os}
       target="_blank"
       rel="noreferrer"
     >
