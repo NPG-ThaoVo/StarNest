@@ -145,18 +145,17 @@ function DownloadButton({ showButton }) {
 
   function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
     // Windows Phone must come first because its UA also contains "Android"
     if (/windows phone/i.test(userAgent)) {
         return "Windows Phone";
     }
 
-    if (/android/i.test(userAgent)) {
+    if (/android/i.test(userAgent) || /windows/i.test(userAgent)) {
         return "Android";
     }
 
     // iOS detection from: http://stackoverflow.com/a/9039885/177710
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    if (/iPad|iPhone|iPod/.test(userAgent) || /macintosh/i.test(userAgent) && !window.MSStream) {
         return "iOS";
     }
 
@@ -165,7 +164,6 @@ function DownloadButton({ showButton }) {
 
   useEffect(() => {
     const currentOs = getMobileOperatingSystem();
-    console.log("Current OS: ", currentOs);
     if (currentOs == "Android") {
       setOs("https://play.google.com/store/apps/details?id=com.calendar.cute");
     } 
