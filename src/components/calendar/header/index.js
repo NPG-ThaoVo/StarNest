@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./index.module.css";
 export default function Header({ setIsOnView }) {
   const [open, setOpen] = useState(false);
+  const [os, setOs] = useState("");
   const btn = useRef();
   function onClick(e) {
     e.target?.children[0]?.click();
@@ -48,7 +49,14 @@ export default function Header({ setIsOnView }) {
   }, []);
 
   useEffect(() => {
-    const os = getMobileOperatingSystem();
+    const currentOs = getMobileOperatingSystem();
+    console.log("Current OS: ", currentOs);
+    if (currentOs == "Android") {
+      setOs("https://play.google.com/store/apps/details?id=com.calendar.cute");
+    } 
+    if (currentOs == "iOS") {
+      setOs("https://apps.apple.com/us/app/id1585939051")
+    }
   }, [])
 
   return (
@@ -62,8 +70,10 @@ export default function Header({ setIsOnView }) {
           <a href="/calendar/#footer">Contact us</a>
           <a href="/calendar/privatepolicy">Private Policy</a>
           <div className={styles["cov-button"]} onClick={onClick}>
+            {console.log("Ahihi: ", os)}
             <a
-              href="https://apps.apple.com/us/app/id1585939051"
+              // href="https://apps.apple.com/us/app/id1585939051"
+              href={os}
               target="_blank"
               rel="noreferrer"
             >

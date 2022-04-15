@@ -7,8 +7,11 @@ export default function Component({
   blur,
   wave,
   round,
-  key
+  key,
+  id
 }) {
+  // const [os, setOs] = useState(false);
+
   function BlueBlur({ x, y }) {
     return (
       <>
@@ -16,6 +19,7 @@ export default function Component({
       </>
     );
   }
+
   return (
     <>
       <div
@@ -35,9 +39,9 @@ export default function Component({
             </div>
           </div>
           <div className={styles["img"]}>
-            <img src={src} className={styles["base"]} alt=""></img>
+            <img src={src} className={styles["base"] + " " + (id % 2 ? styles["lean-right"] : styles["lean-left"])} alt=""></img>
             <div className={styles["img-blur"]}></div>
-            <img src={src} alt=""></img>
+            <img src={src} alt="" className={id % 2 ? styles["lean-right"] : styles["lean-left"]}></img>
           </div>
           {blur && <BlueBlur x={blur.x} y={blur.y} />}
           {round && <Round x={round.x} y={round.y} />}
