@@ -50,7 +50,6 @@ export default function Header({ setIsOnView }) {
 
   useEffect(() => {
     const currentOs = getMobileOperatingSystem();
-    console.log("Current OS: ", currentOs);
     if (currentOs == "Android") {
       setOs("https://play.google.com/store/apps/details?id=com.calendar.cute");
     } 
@@ -70,7 +69,6 @@ export default function Header({ setIsOnView }) {
           <a href="/calendar/#footer">Contact us</a>
           <a href="/calendar/privatepolicy">Private Policy</a>
           <div className={styles["cov-button"]} onClick={onClick}>
-            {console.log("Ahihi: ", os)}
             <a
               // href="https://apps.apple.com/us/app/id1585939051"
               href={os}
