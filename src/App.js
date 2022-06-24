@@ -6,6 +6,7 @@ import Termsofuse from './components/home/termsofuse';
 import Calendar from './pages/calendar';
 import CalendarTermofuse from './components/calendar/termofuse';
 import CalendarPrivatepolicy from './components/calendar/privatePolicy';
+import DirectStore from './components/directstore';
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
         path="/calendar/privatepolicy"
         element={<CalendarPrivatepolicy />}
       />
+      <Route path="/learnkanji" element={<DirectStore />} />
+      <Route path="/jlpttest" element={<DirectStore />} />
+      <Route path="/goethetest" element={<DirectStore />} />
+
     </Routes>
   );
 }
