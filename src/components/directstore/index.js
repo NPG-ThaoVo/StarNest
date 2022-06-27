@@ -15,6 +15,10 @@ const DirectStore = () => {
       ios: 'https://apps.apple.com/us/app/prep-goethe-deutsch-lernen/id1572225086',
       android: 'https://play.google.com/store/apps/details?id=com.goethetest'
     },
+    '/cal': {
+      ios: 'https://apps.apple.com/us/app/id1585939051',
+      android: 'https://play.google.com/store/apps/details?id=com.calendar.cute'
+    }
   }
   
   const location = useLocation();

@@ -9,6 +9,14 @@ import CalendarPrivatepolicy from './components/calendar/privatePolicy';
 import DirectStore from './components/directstore';
 
 function App() {
+
+  const directStoreRoute = [
+    '/learnkanji',
+    '/jlpttest',
+    '/goethetest',
+    '/cal',
+  ]
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -21,10 +29,9 @@ function App() {
         path="/calendar/privatepolicy"
         element={<CalendarPrivatepolicy />}
       />
-      <Route path="/learnkanji" element={<DirectStore />} />
-      <Route path="/jlpttest" element={<DirectStore />} />
-      <Route path="/goethetest" element={<DirectStore />} />
-
+      {directStoreRoute.map(path => (
+        <Route key={path} path={path} element={<DirectStore />} />
+      ))}
     </Routes>
   );
 }
