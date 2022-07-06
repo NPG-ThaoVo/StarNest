@@ -7,6 +7,8 @@ import Calendar from "./pages/calendar";
 import CalendarTermofuse from "./components/calendar/termofuse";
 import CalendarPrivatepolicy from "./components/calendar/privatePolicy";
 import DirectStore from "./components/directstore";
+import CalendarAndroidPrivatepolicy from "./components/calendar/androidprivatepolicy";
+import CalendarAndroidTermofuse from "./components/calendar/androidtermsofuse";
 
 function App() {
   const directStoreRoute = ["/learnkanji", "/jlpttest", "/goethetest", "/cal"];
