@@ -1,23 +1,23 @@
-import React from 'react';
-import styles from './index.module.css';
-import Header from '../../layouts/Header';
-import Footer from '../../layouts/Footer';
+import React from "react";
+import styles from "./index.module.css";
+import Header from "../../layouts/Header";
+import Footer from "../../layouts/Footer";
 
 export default function CalendarPrivatepolicy() {
   return (
     <>
       <Header />
-      <div className={styles['container-A']}>
-        <div className={styles['container']}>
-          <div className={styles['title']}>
-            <h1>Vu Studio Privacy</h1>
+      <div className={styles["container-A"]}>
+        <div className={styles["container"]}>
+          <div className={styles["title"]}>
+            <h1>StarNest Studio Privacy</h1>
           </div>
-          <div className={styles['content']}>
-            <p>We respect and value your privacy here at V.u Studio.</p>
+          <div className={styles["content"]}>
+            <p>We respect and value your privacy here at StarNest Studio.</p>
             <p>
-              Our Privacy Policy describes the information collected by our V.u
-              Studios, and our partners, through our mobile applications and the
-              use of the information.
+              Our Privacy Policy describes the information collected by our
+              StarNest Studios, and our partners, through our mobile
+              applications and the use of the information.
             </p>
             <p>
               What third parties collect via our apps
@@ -75,8 +75,8 @@ export default function CalendarPrivatepolicy() {
             <p>
               Changes to this privacy policy
               <br />
-              V.u Studios has the discretion to update this privacy policy at
-              any time. When we do, we will revise the updated date at the
+              StarNest Studios has the discretion to update this privacy policy
+              at any time. When we do, we will revise the updated date at the
               bottom of this page. We encourage Users to frequently check this
               page for any changes to stay informed about how we are helping to
               protect the personal information we collect. You acknowledge and
@@ -91,7 +91,7 @@ export default function CalendarPrivatepolicy() {
               at:
               <br />
               <a href="mailto:?subject=StartNest QA&body=Question...">
-                {' '}
+                {" "}
                 ngocttbstarnest@gmail.com
               </a>
             </p>
