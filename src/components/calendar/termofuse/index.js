@@ -1,21 +1,21 @@
-import React from 'react';
-import styles from './index.module.css';
-import Header from '../../layouts/Header';
-import Footer from '../../layouts/Footer';
+import React from "react";
+import styles from "./index.module.css";
+import Header from "../../layouts/Header";
+import Footer from "../../layouts/Footer";
 
 export default function CalendarTermofuse() {
   return (
     <>
       <Header />
-      <div className={styles['container-A']}>
-        <div className={styles['container']}>
-          <div className={styles['title']}>
+      <div className={styles["container-A"]}>
+        <div className={styles["container"]}>
+          <div className={styles["title"]}>
             <h1>Calendar Terms of Use</h1>
           </div>
-          <div className={styles['content']}>
+          <div className={styles["content"]}>
             <p>
               <strong>
-                We respect and value your privacy here at V.u Studios.
+                We respect and value your privacy here at StarNest Studios.
               </strong>
             </p>
             <p>
@@ -43,11 +43,11 @@ export default function CalendarTermofuse() {
             </p>
             <p>
               <strong>Contact us</strong>
-              <br /> If you have any questions about this{' '}
+              <br /> If you have any questions about this{" "}
               <strong>Terms of Use</strong> the practices of this site, or your
               dealings with our Apps, please contact us at:
               <a href="mailto:?subject=StartNest QA&body=Question...">
-                {' '}
+                {" "}
                 ngocttbstarnest@gmail.com
               </a>
             </p>
