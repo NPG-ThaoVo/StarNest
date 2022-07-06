@@ -35,7 +35,7 @@ export default function CalendarTermofuse() {
               We do not store any of your data, all data is stored in your
               phone. When you delete the application, the data will be
               completely deleted according to the application. We value your
-              privacy at Vu studio.
+              privacy at StarNest studio.
             </p>
             <p>
               We will add sync and backup your data with apple cloud kit in the
