@@ -35,7 +35,7 @@ export default function CalendarAndroidTermofuse() {
               We do not store any of your data, all data is stored in your
               phone. When you delete the application, the data will be
               completely deleted according to the application. We value your
-              privacy at Vu studio.
+              privacy at StarNest studio.
             </p>
             <p>
               We may use third-party advertising companies to serve ads when you
