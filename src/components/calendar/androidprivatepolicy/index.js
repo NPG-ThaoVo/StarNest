@@ -10,7 +10,7 @@ export default function CalendarAndroidPrivatepolicy() {
       <div className={styles["container-A"]}>
         <div className={styles["container"]}>
           <div className={styles["title"]}>
-            <h1>Vu Studio Privacy</h1>
+            <h1>StarNest Studio Privacy</h1>
           </div>
           <div className={styles["content"]}>
             <strong>
@@ -97,8 +97,8 @@ export default function CalendarAndroidPrivatepolicy() {
             <p>
               <strong> Changes to this privacy policy</strong>
               <br />
-              V.u Studios has the discretion to update this privacy policy at
-              any time. When we do, we will revise the updated date at the
+              StarNest Studios has the discretion to update this privacy policy
+              at any time. When we do, we will revise the updated date at the
               bottom of this page. We encourage Users to frequently check this
               page for any changes to stay informed about how we are helping to
               protect the personal information we collect. You acknowledge and
