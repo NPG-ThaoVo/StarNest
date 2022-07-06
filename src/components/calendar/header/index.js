@@ -115,7 +115,7 @@ export default function Header({ setIsOnView }) {
         </div>
         <div className={styles["subtitle"]}>
           Improve your performance, get your work done with the best app on
-          iPhone and iPad.
+          IOS and Android.
         </div>
         <div className={styles["btn-blur"]} onClick={onClick} ref={btn}>
           <a

@@ -6,10 +6,11 @@ import Termsofuse from "./components/home/termsofuse";
 import Calendar from "./pages/calendar";
 import CalendarTermofuse from "./components/calendar/termofuse";
 import CalendarPrivatepolicy from "./components/calendar/privatePolicy";
-import CalendarAndroidPrivatepolicy from "./components/calendar/androidprivatepolicy";
-import CalendarAndroidTermofuse from "./components/calendar/androidtermsofuse";
+import DirectStore from "./components/directstore";
 
 function App() {
+  const directStoreRoute = ["/learnkanji", "/jlpttest", "/goethetest", "/cal"];
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -30,6 +31,9 @@ function App() {
         path="/calendar/androidtermsofuse"
         element={<CalendarAndroidTermofuse />}
       />
+      {directStoreRoute.map((path) => (
+        <Route key={path} path={path} element={<DirectStore />} />
+      ))}
     </Routes>
   );
 }
